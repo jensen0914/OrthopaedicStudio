@@ -1,0 +1,7 @@
+orthonotify754309
+The pre-release version of OrthoStudio that you are using must be updated!
+An updated version can be installed by either using the Osirix PluginManager (which is found in the Plugins-menu) or by visiting our web site:
+http:/www.spectronic.se/orthostudio/
+ 
+The pre-release version of OrthoStudio that you are currently using will be deactivated on January 31, 2011.
+Ok, I understand

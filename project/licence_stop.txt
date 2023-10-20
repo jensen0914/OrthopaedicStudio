@@ -1,0 +1,5 @@
+orthostop356567
+The pre-release version of OrthoStudio that you are using is deprecated and has now been deactivated!
+To continue using OrthoStudio please install the new updated version of OrthoStudio, which can be downloaded either by using the Osirix Plugin Manager (which is found in the Plugins-menu) or by visiting our web site: 
+http://www.spectronic.se/orthostudio/
+Quit OrthoStudio

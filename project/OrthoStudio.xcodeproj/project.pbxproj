@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		ABB76340067FB2A8000912C1 /* DCMPix.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB76339067FB2A8000912C1 /* DCMPix.h */; };
+		ABB76341067FB2A8000912C1 /* DCMView.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633A067FB2A8000912C1 /* DCMView.h */; };
+		ABB76342067FB2A8000912C1 /* dicomFile.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633B067FB2A8000912C1 /* dicomFile.h */; };
+		ABB76343067FB2A8000912C1 /* MyPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633C067FB2A8000912C1 /* MyPoint.h */; };
+		ABB76344067FB2A8000912C1 /* PluginFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633D067FB2A8000912C1 /* PluginFilter.h */; };
+		ABB76345067FB2A8000912C1 /* ROI.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633E067FB2A8000912C1 /* ROI.h */; };
+		ABB76346067FB2A8000912C1 /* ViewerController.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633F067FB2A8000912C1 /* ViewerController.h */; };
+		EB0C82C71212A5AE007A7E07 /* AP_left_femur.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82C61212A5AE007A7E07 /* AP_left_femur.png */; };
+		EB0C82DA1212A5BD007A7E07 /* AP_left_lateral.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82D11212A5BD007A7E07 /* AP_left_lateral.png */; };
+		EB0C82DB1212A5BD007A7E07 /* AP_left_medial.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82D21212A5BD007A7E07 /* AP_left_medial.png */; };
+		EB0C82DC1212A5BD007A7E07 /* AP_pubsymph.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82D31212A5BD007A7E07 /* AP_pubsymph.png */; };
+		EB0C82DD1212A5BD007A7E07 /* AP_right_femur.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82D41212A5BD007A7E07 /* AP_right_femur.png */; };
+		EB0C82DE1212A5BD007A7E07 /* AP_right_JSW.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82D51212A5BD007A7E07 /* AP_right_JSW.png */; };
+		EB0C82DF1212A5BD007A7E07 /* AP_right_lateral.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82D61212A5BD007A7E07 /* AP_right_lateral.png */; };
+		EB0C82E01212A5BD007A7E07 /* AP_right_medial.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82D71212A5BD007A7E07 /* AP_right_medial.png */; };
+		EB0C830F1212B238007A7E07 /* AP_left_JSW.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C830E1212B238007A7E07 /* AP_left_JSW.png */; };
+		EB0C83291212C57D007A7E07 /* AP_saccocc.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C83281212C57D007A7E07 /* AP_saccocc.png */; };
+		EB0C84101212F008007A7E07 /* OrthopaedicStudioFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0C840F1212F008007A7E07 /* OrthopaedicStudioFilter.m */; };
+		EB0C84121212F021007A7E07 /* OrthopaedicStudioFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0C84111212F021007A7E07 /* OrthopaedicStudioFilter.h */; };
+		EB0C84141212F03F007A7E07 /* OrthoStudio_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = EB0C84131212F03F007A7E07 /* OrthoStudio_Prefix.pch */; };
+		EB1FEE7512D3811100732EC2 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1FEE7412D3811100732EC2 /* AppController.h */; };
+		EB1FEE7812D382DF00732EC2 /* AppControllerMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1FEE7712D382DF00732EC2 /* AppControllerMenu.h */; };
+		EB1FEE7A12D382F900732EC2 /* AppControllerMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1FEE7912D382F900732EC2 /* AppControllerMenu.m */; };
+		EB27462F11C66F1A00829AA6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB27462E11C66F1A00829AA6 /* MainMenu.xib */; };
+		EB297A1711D23D1800A7E875 /* OsiriX Headers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB297A1611D23D1800A7E875 /* OsiriX Headers.framework */; };
+		EB412408152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB412404152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png */; };
+		EB412409152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB412405152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png */; };
+		EB41240A152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB412406152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckLeft.png */; };
+		EB41240B152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB412407152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckRight.png */; };
+		EB7AE86513206A4700154284 /* pointFrogScfeShaftSuperiorRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85113206A4700154284 /* pointFrogScfeShaftSuperiorRight.png */; };
+		EB7AE86613206A4700154284 /* pointFrogScfeShaftSuperiorLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85213206A4700154284 /* pointFrogScfeShaftSuperiorLeft.png */; };
+		EB7AE86713206A4700154284 /* pointFrogScfeShaftInferiorRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85313206A4700154284 /* pointFrogScfeShaftInferiorRight.png */; };
+		EB7AE86813206A4700154284 /* pointFrogScfeShaftInferiorLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85413206A4700154284 /* pointFrogScfeShaftInferiorLeft.png */; };
+		EB7AE86913206A4700154284 /* pointFrogScfeNarrowestFemoralNeckRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85513206A4700154284 /* pointFrogScfeNarrowestFemoralNeckRight.png */; };
+		EB7AE86A13206A4700154284 /* pointFrogScfeNarrowestFemoralNeckLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85613206A4700154284 /* pointFrogScfeNarrowestFemoralNeckLeft.png */; };
+		EB7AE86B13206A4700154284 /* pointFrogScfeMetaphysisRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85713206A4700154284 /* pointFrogScfeMetaphysisRight.png */; };
+		EB7AE86C13206A4700154284 /* pointFrogScfeMetaphysisLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85813206A4700154284 /* pointFrogScfeMetaphysisLeft.png */; };
+		EB7AE86D13206A4700154284 /* pointFrogScfeFemoralHeadRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85913206A4700154284 /* pointFrogScfeFemoralHeadRight.png */; };
+		EB7AE86E13206A4700154284 /* pointFrogScfeFemoralHeadLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85A13206A4700154284 /* pointFrogScfeFemoralHeadLeft.png */; };
+		EB7AE86F13206A4700154284 /* pointFrogScfeFemoralHeadExceedsCircleRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85B13206A4700154284 /* pointFrogScfeFemoralHeadExceedsCircleRight.png */; };
+		EB7AE87013206A4700154284 /* pointFrogScfeFemoralHeadExceedsCircleLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85C13206A4700154284 /* pointFrogScfeFemoralHeadExceedsCircleLeft.png */; };
+		EB7AE87113206A4700154284 /* pointFrogScfeEpiphysisSuperiorRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85D13206A4700154284 /* pointFrogScfeEpiphysisSuperiorRight.png */; };
+		EB7AE87213206A4700154284 /* pointFrogScfeEpiphysisSuperiorLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85E13206A4700154284 /* pointFrogScfeEpiphysisSuperiorLeft.png */; };
+		EB7AE87313206A4700154284 /* pointFrogScfeEpiphysisInferiorRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE85F13206A4700154284 /* pointFrogScfeEpiphysisInferiorRight.png */; };
+		EB7AE87413206A4700154284 /* pointFrogScfeEpiphysisInferiorLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE86013206A4700154284 /* pointFrogScfeEpiphysisInferiorLeft.png */; };
+		EB7AE87513206A4700154284 /* pointFrogScfeAlphaAdjustRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE86113206A4700154284 /* pointFrogScfeAlphaAdjustRight.png */; };
+		EB7AE87613206A4700154284 /* pointFrogScfeAlphaAdjustLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE86213206A4700154284 /* pointFrogScfeAlphaAdjustLeft.png */; };
+		EB7AE87713206A4700154284 /* pointFrogAnteriorFemoralNeckRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE86313206A4700154284 /* pointFrogAnteriorFemoralNeckRight.png */; };
+		EB7AE87813206A4700154284 /* pointFrogAnteriorFemoralNeckLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB7AE86413206A4700154284 /* pointFrogAnteriorFemoralNeckLeft.png */; };
+		EBDA620B1222E26600E6102A /* FP_anterior.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDA620A1222E26600E6102A /* FP_anterior.png */; };
+		EBDA620D1222E26F00E6102A /* FP_femur.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDA620C1222E26F00E6102A /* FP_femur.png */; };
+		EBE4463412004A75009C44B9 /* ResultsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE4463212004A75009C44B9 /* ResultsManager.h */; };
+		EBE4463512004A75009C44B9 /* ResultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE4463312004A75009C44B9 /* ResultsManager.m */; };
+		EBE447C51200878A009C44B9 /* RoiManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE447C31200878A009C44B9 /* RoiManager.h */; };
+		EBE447C61200878A009C44B9 /* RoiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE447C41200878A009C44B9 /* RoiManager.m */; };
+		EBF66C3C12F03D5300A07616 /* LicenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF66C3B12F03D5300A07616 /* LicenceManager.m */; };
+		EBF66C3E12F03D5E00A07616 /* LicenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF66C3D12F03D5E00A07616 /* LicenceManager.h */; };
+		EBF66C4012F03D6B00A07616 /* MACAddressManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF66C3F12F03D6B00A07616 /* MACAddressManager.m */; };
+		EBF66C4212F03D7700A07616 /* MACAddressManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF66C4112F03D7700A07616 /* MACAddressManager.h */; };
+		EBFA62C712F6AC9200C69703 /* NSAttributedString+Hyperlink.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */; };
+		EBFA62C812F6AC9200C69703 /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */; };
+		EBFE8B20121BFB9100D127E8 /* DCMObject.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFE8B1F121BFB9100D127E8 /* DCMObject.h */; };
+		EBFE8BD4121C255500D127E8 /* FoundationErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFE8BD3121C255500D127E8 /* FoundationErrors.h */; };
+		EBFEE8901223ED3800A845C6 /* Frog_left_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88A1223ED3800A845C6 /* Frog_left_circle.png */; };
+		EBFEE8911223ED3800A845C6 /* Frog_left_femur.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88B1223ED3800A845C6 /* Frog_left_femur.png */; };
+		EBFEE8921223ED3800A845C6 /* Frog_left_narrowest.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88C1223ED3800A845C6 /* Frog_left_narrowest.png */; };
+		EBFEE8931223ED3800A845C6 /* Frog_right_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88D1223ED3800A845C6 /* Frog_right_circle.png */; };
+		EBFEE8941223ED3800A845C6 /* Frog_right_femur.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88E1223ED3800A845C6 /* Frog_right_femur.png */; };
+		EBFEE8951223ED3800A845C6 /* Frog_right_narrowest.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88F1223ED3800A845C6 /* Frog_right_narrowest.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB76339067FB2A8000912C1 /* DCMPix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DCMPix.h; sourceTree = "<group>"; };
+		ABB7633A067FB2A8000912C1 /* DCMView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DCMView.h; sourceTree = "<group>"; };
+		ABB7633B067FB2A8000912C1 /* dicomFile.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = dicomFile.h; sourceTree = "<group>"; };
+		ABB7633C067FB2A8000912C1 /* MyPoint.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyPoint.h; sourceTree = "<group>"; };
+		ABB7633D067FB2A8000912C1 /* PluginFilter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PluginFilter.h; sourceTree = "<group>"; };
+		ABB7633E067FB2A8000912C1 /* ROI.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ROI.h; sourceTree = "<group>"; };
+		ABB7633F067FB2A8000912C1 /* ViewerController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ViewerController.h; sourceTree = "<group>"; };
+		EB0C82C61212A5AE007A7E07 /* AP_left_femur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_femur.png; sourceTree = "<group>"; };
+		EB0C82D11212A5BD007A7E07 /* AP_left_lateral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_lateral.png; sourceTree = "<group>"; };
+		EB0C82D21212A5BD007A7E07 /* AP_left_medial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_medial.png; sourceTree = "<group>"; };
+		EB0C82D31212A5BD007A7E07 /* AP_pubsymph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_pubsymph.png; sourceTree = "<group>"; };
+		EB0C82D41212A5BD007A7E07 /* AP_right_femur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_right_femur.png; sourceTree = "<group>"; };
+		EB0C82D51212A5BD007A7E07 /* AP_right_JSW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_right_JSW.png; sourceTree = "<group>"; };
+		EB0C82D61212A5BD007A7E07 /* AP_right_lateral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_right_lateral.png; sourceTree = "<group>"; };
+		EB0C82D71212A5BD007A7E07 /* AP_right_medial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_right_medial.png; sourceTree = "<group>"; };
+		EB0C830E1212B238007A7E07 /* AP_left_JSW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_JSW.png; sourceTree = "<group>"; };
+		EB0C83281212C57D007A7E07 /* AP_saccocc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_saccocc.png; sourceTree = "<group>"; };
+		EB0C840F1212F008007A7E07 /* OrthopaedicStudioFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrthopaedicStudioFilter.m; sourceTree = "<group>"; };
+		EB0C84111212F021007A7E07 /* OrthopaedicStudioFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrthopaedicStudioFilter.h; sourceTree = "<group>"; };
+		EB0C84131212F03F007A7E07 /* OrthoStudio_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrthoStudio_Prefix.pch; sourceTree = "<group>"; };
+		EB0C84181212F084007A7E07 /* Orthopaedic Studio.osirixplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Orthopaedic Studio.osirixplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1FEE7412D3811100732EC2 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		EB1FEE7712D382DF00732EC2 /* AppControllerMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppControllerMenu.h; path = "OsiriX Headers/AppControllerMenu.h"; sourceTree = "<group>"; };
+		EB1FEE7912D382F900732EC2 /* AppControllerMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppControllerMenu.m; sourceTree = "<group>"; };
+		EB27462E11C66F1A00829AA6 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		EB297A1611D23D1800A7E875 /* OsiriX Headers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "OsiriX Headers.framework"; sourceTree = "<group>"; };
+		EB412404152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointAPFemoralHeadExceedsCircleLeft.png; sourceTree = "<group>"; };
+		EB412405152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointAPFemoralHeadExceedsCircleRight.png; sourceTree = "<group>"; };
+		EB412406152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointAPNarrowestFemoralNeckLeft.png; sourceTree = "<group>"; };
+		EB412407152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointAPNarrowestFemoralNeckRight.png; sourceTree = "<group>"; };
+		EB7AE85113206A4700154284 /* pointFrogScfeShaftSuperiorRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeShaftSuperiorRight.png; sourceTree = "<group>"; };
+		EB7AE85213206A4700154284 /* pointFrogScfeShaftSuperiorLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeShaftSuperiorLeft.png; sourceTree = "<group>"; };
+		EB7AE85313206A4700154284 /* pointFrogScfeShaftInferiorRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeShaftInferiorRight.png; sourceTree = "<group>"; };
+		EB7AE85413206A4700154284 /* pointFrogScfeShaftInferiorLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeShaftInferiorLeft.png; sourceTree = "<group>"; };
+		EB7AE85513206A4700154284 /* pointFrogScfeNarrowestFemoralNeckRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeNarrowestFemoralNeckRight.png; sourceTree = "<group>"; };
+		EB7AE85613206A4700154284 /* pointFrogScfeNarrowestFemoralNeckLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeNarrowestFemoralNeckLeft.png; sourceTree = "<group>"; };
+		EB7AE85713206A4700154284 /* pointFrogScfeMetaphysisRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeMetaphysisRight.png; sourceTree = "<group>"; };
+		EB7AE85813206A4700154284 /* pointFrogScfeMetaphysisLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeMetaphysisLeft.png; sourceTree = "<group>"; };
+		EB7AE85913206A4700154284 /* pointFrogScfeFemoralHeadRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeFemoralHeadRight.png; sourceTree = "<group>"; };
+		EB7AE85A13206A4700154284 /* pointFrogScfeFemoralHeadLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeFemoralHeadLeft.png; sourceTree = "<group>"; };
+		EB7AE85B13206A4700154284 /* pointFrogScfeFemoralHeadExceedsCircleRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeFemoralHeadExceedsCircleRight.png; sourceTree = "<group>"; };
+		EB7AE85C13206A4700154284 /* pointFrogScfeFemoralHeadExceedsCircleLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeFemoralHeadExceedsCircleLeft.png; sourceTree = "<group>"; };
+		EB7AE85D13206A4700154284 /* pointFrogScfeEpiphysisSuperiorRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeEpiphysisSuperiorRight.png; sourceTree = "<group>"; };
+		EB7AE85E13206A4700154284 /* pointFrogScfeEpiphysisSuperiorLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeEpiphysisSuperiorLeft.png; sourceTree = "<group>"; };
+		EB7AE85F13206A4700154284 /* pointFrogScfeEpiphysisInferiorRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeEpiphysisInferiorRight.png; sourceTree = "<group>"; };
+		EB7AE86013206A4700154284 /* pointFrogScfeEpiphysisInferiorLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeEpiphysisInferiorLeft.png; sourceTree = "<group>"; };
+		EB7AE86113206A4700154284 /* pointFrogScfeAlphaAdjustRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeAlphaAdjustRight.png; sourceTree = "<group>"; };
+		EB7AE86213206A4700154284 /* pointFrogScfeAlphaAdjustLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogScfeAlphaAdjustLeft.png; sourceTree = "<group>"; };
+		EB7AE86313206A4700154284 /* pointFrogAnteriorFemoralNeckRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogAnteriorFemoralNeckRight.png; sourceTree = "<group>"; };
+		EB7AE86413206A4700154284 /* pointFrogAnteriorFemoralNeckLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointFrogAnteriorFemoralNeckLeft.png; sourceTree = "<group>"; };
+		EBDA620A1222E26600E6102A /* FP_anterior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FP_anterior.png; sourceTree = "<group>"; };
+		EBDA620C1222E26F00E6102A /* FP_femur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FP_femur.png; sourceTree = "<group>"; };
+		EBE4463212004A75009C44B9 /* ResultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsManager.h; sourceTree = "<group>"; };
+		EBE4463312004A75009C44B9 /* ResultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsManager.m; sourceTree = "<group>"; };
+		EBE447C31200878A009C44B9 /* RoiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoiManager.h; sourceTree = "<group>"; };
+		EBE447C41200878A009C44B9 /* RoiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoiManager.m; sourceTree = "<group>"; };
+		EBF66C3B12F03D5300A07616 /* LicenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicenceManager.m; sourceTree = "<group>"; };
+		EBF66C3D12F03D5E00A07616 /* LicenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LicenceManager.h; sourceTree = "<group>"; };
+		EBF66C3F12F03D6B00A07616 /* MACAddressManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACAddressManager.m; sourceTree = "<group>"; };
+		EBF66C4112F03D7700A07616 /* MACAddressManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACAddressManager.h; sourceTree = "<group>"; };
+		EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
+		EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
+		EBFE8B1F121BFB9100D127E8 /* DCMObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMObject.h; sourceTree = "<group>"; };
+		EBFE8BD3121C255500D127E8 /* FoundationErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationErrors.h; sourceTree = "<group>"; };
+		EBFEE88A1223ED3800A845C6 /* Frog_left_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_left_circle.png; sourceTree = "<group>"; };
+		EBFEE88B1223ED3800A845C6 /* Frog_left_femur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_left_femur.png; sourceTree = "<group>"; };
+		EBFEE88C1223ED3800A845C6 /* Frog_left_narrowest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_left_narrowest.png; sourceTree = "<group>"; };
+		EBFEE88D1223ED3800A845C6 /* Frog_right_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_right_circle.png; sourceTree = "<group>"; };
+		EBFEE88E1223ED3800A845C6 /* Frog_right_femur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_right_femur.png; sourceTree = "<group>"; };
+		EBFEE88F1223ED3800A845C6 /* Frog_right_narrowest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_right_narrowest.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				EB297A1711D23D1800A7E875 /* OsiriX Headers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Duplicate */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = Duplicate;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB412404152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png */,
+				EB412405152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png */,
+				EB412406152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckLeft.png */,
+				EB412407152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckRight.png */,
+				EB7AE85113206A4700154284 /* pointFrogScfeShaftSuperiorRight.png */,
+				EB7AE85213206A4700154284 /* pointFrogScfeShaftSuperiorLeft.png */,
+				EB7AE85313206A4700154284 /* pointFrogScfeShaftInferiorRight.png */,
+				EB7AE85413206A4700154284 /* pointFrogScfeShaftInferiorLeft.png */,
+				EB7AE85513206A4700154284 /* pointFrogScfeNarrowestFemoralNeckRight.png */,
+				EB7AE85613206A4700154284 /* pointFrogScfeNarrowestFemoralNeckLeft.png */,
+				EB7AE85713206A4700154284 /* pointFrogScfeMetaphysisRight.png */,
+				EB7AE85813206A4700154284 /* pointFrogScfeMetaphysisLeft.png */,
+				EB7AE85913206A4700154284 /* pointFrogScfeFemoralHeadRight.png */,
+				EB7AE85A13206A4700154284 /* pointFrogScfeFemoralHeadLeft.png */,
+				EB7AE85B13206A4700154284 /* pointFrogScfeFemoralHeadExceedsCircleRight.png */,
+				EB7AE85C13206A4700154284 /* pointFrogScfeFemoralHeadExceedsCircleLeft.png */,
+				EB7AE85D13206A4700154284 /* pointFrogScfeEpiphysisSuperiorRight.png */,
+				EB7AE85E13206A4700154284 /* pointFrogScfeEpiphysisSuperiorLeft.png */,
+				EB7AE85F13206A4700154284 /* pointFrogScfeEpiphysisInferiorRight.png */,
+				EB7AE86013206A4700154284 /* pointFrogScfeEpiphysisInferiorLeft.png */,
+				EB7AE86113206A4700154284 /* pointFrogScfeAlphaAdjustRight.png */,
+				EB7AE86213206A4700154284 /* pointFrogScfeAlphaAdjustLeft.png */,
+				EB7AE86313206A4700154284 /* pointFrogAnteriorFemoralNeckRight.png */,
+				EB7AE86413206A4700154284 /* pointFrogAnteriorFemoralNeckLeft.png */,
+				EBFEE88A1223ED3800A845C6 /* Frog_left_circle.png */,
+				EBFEE88B1223ED3800A845C6 /* Frog_left_femur.png */,
+				EBFEE88C1223ED3800A845C6 /* Frog_left_narrowest.png */,
+				EBFEE88D1223ED3800A845C6 /* Frog_right_circle.png */,
+				EBFEE88E1223ED3800A845C6 /* Frog_right_femur.png */,
+				EBFEE88F1223ED3800A845C6 /* Frog_right_narrowest.png */,
+				EBDA620C1222E26F00E6102A /* FP_femur.png */,
+				EBDA620A1222E26600E6102A /* FP_anterior.png */,
+				EB0C83281212C57D007A7E07 /* AP_saccocc.png */,
+				EB0C830E1212B238007A7E07 /* AP_left_JSW.png */,
+				EB0C82D11212A5BD007A7E07 /* AP_left_lateral.png */,
+				EB0C82D21212A5BD007A7E07 /* AP_left_medial.png */,
+				EB0C82D31212A5BD007A7E07 /* AP_pubsymph.png */,
+				EB0C82D41212A5BD007A7E07 /* AP_right_femur.png */,
+				EB0C82D51212A5BD007A7E07 /* AP_right_JSW.png */,
+				EB0C82D61212A5BD007A7E07 /* AP_right_lateral.png */,
+				EB0C82D71212A5BD007A7E07 /* AP_right_medial.png */,
+				EB0C82C61212A5AE007A7E07 /* AP_left_femur.png */,
+				EB27462E11C66F1A00829AA6 /* MainMenu.xib */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ABB76338067FB2A8000912C1 /* OsiriX Headers */,
+				AB2C26750677B0C400A08910 /* OrthoStudioCode */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB297A1611D23D1800A7E875 /* OsiriX Headers.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB0C84181212F084007A7E07 /* Orthopaedic Studio.osirixplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EB0C84131212F03F007A7E07 /* OrthoStudio_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		AB2C26750677B0C400A08910 /* OrthoStudioCode */ = {
+			isa = PBXGroup;
+			children = (
+				EB1FEE7912D382F900732EC2 /* AppControllerMenu.m */,
+				EB1FEE7712D382DF00732EC2 /* AppControllerMenu.h */,
+				EB0C84111212F021007A7E07 /* OrthopaedicStudioFilter.h */,
+				EB0C840F1212F008007A7E07 /* OrthopaedicStudioFilter.m */,
+				EBE4463212004A75009C44B9 /* ResultsManager.h */,
+				EBE4463312004A75009C44B9 /* ResultsManager.m */,
+				EBE447C31200878A009C44B9 /* RoiManager.h */,
+				EBE447C41200878A009C44B9 /* RoiManager.m */,
+				EBF66C3D12F03D5E00A07616 /* LicenceManager.h */,
+				EBF66C3B12F03D5300A07616 /* LicenceManager.m */,
+				EBF66C4112F03D7700A07616 /* MACAddressManager.h */,
+				EBF66C3F12F03D6B00A07616 /* MACAddressManager.m */,
+				EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */,
+				EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */,
+			);
+			name = OrthoStudioCode;
+			sourceTree = "<group>";
+		};
+		ABB76338067FB2A8000912C1 /* OsiriX Headers */ = {
+			isa = PBXGroup;
+			children = (
+				EB1FEE7412D3811100732EC2 /* AppController.h */,
+				ABB7633D067FB2A8000912C1 /* PluginFilter.h */,
+				EBFE8BD3121C255500D127E8 /* FoundationErrors.h */,
+				ABB76339067FB2A8000912C1 /* DCMPix.h */,
+				EBFE8B1F121BFB9100D127E8 /* DCMObject.h */,
+				ABB7633A067FB2A8000912C1 /* DCMView.h */,
+				ABB7633B067FB2A8000912C1 /* dicomFile.h */,
+				ABB7633C067FB2A8000912C1 /* MyPoint.h */,
+				ABB7633E067FB2A8000912C1 /* ROI.h */,
+				ABB7633F067FB2A8000912C1 /* ViewerController.h */,
+			);
+			path = "OsiriX Headers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D5B49AD048680CD000E48DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB76340067FB2A8000912C1 /* DCMPix.h in Headers */,
+				ABB76341067FB2A8000912C1 /* DCMView.h in Headers */,
+				ABB76342067FB2A8000912C1 /* dicomFile.h in Headers */,
+				ABB76343067FB2A8000912C1 /* MyPoint.h in Headers */,
+				ABB76344067FB2A8000912C1 /* PluginFilter.h in Headers */,
+				ABB76345067FB2A8000912C1 /* ROI.h in Headers */,
+				ABB76346067FB2A8000912C1 /* ViewerController.h in Headers */,
+				EBE4463412004A75009C44B9 /* ResultsManager.h in Headers */,
+				EBE447C51200878A009C44B9 /* RoiManager.h in Headers */,
+				EB0C84121212F021007A7E07 /* OrthopaedicStudioFilter.h in Headers */,
+				EB0C84141212F03F007A7E07 /* OrthoStudio_Prefix.pch in Headers */,
+				EBFE8B20121BFB9100D127E8 /* DCMObject.h in Headers */,
+				EBFE8BD4121C255500D127E8 /* FoundationErrors.h in Headers */,
+				EB1FEE7512D3811100732EC2 /* AppController.h in Headers */,
+				EB1FEE7812D382DF00732EC2 /* AppControllerMenu.h in Headers */,
+				EBF66C3E12F03D5E00A07616 /* LicenceManager.h in Headers */,
+				EBF66C4212F03D7700A07616 /* MACAddressManager.h in Headers */,
+				EBFA62C712F6AC9200C69703 /* NSAttributedString+Hyperlink.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* Orthopaedic Studio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE6A9A7D08AC840200D0C1EE /* Build configuration list for PBXNativeTarget "Orthopaedic Studio" */;
+			buildPhases = (
+				8D5B49AD048680CD000E48DA /* Headers */,
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				8D5B49B5048680CD000E48DA /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Orthopaedic Studio";
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = Invert;
+			productReference = EB0C84181212F084007A7E07 /* Orthopaedic Studio.osirixplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = CE6A9A8108AC840200D0C1EE /* Build configuration list for PBXProject "OrthoStudio" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* Duplicate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* Orthopaedic Studio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				EB27462F11C66F1A00829AA6 /* MainMenu.xib in Resources */,
+				EB0C82C71212A5AE007A7E07 /* AP_left_femur.png in Resources */,
+				EB0C82DA1212A5BD007A7E07 /* AP_left_lateral.png in Resources */,
+				EB0C82DB1212A5BD007A7E07 /* AP_left_medial.png in Resources */,
+				EB0C82DC1212A5BD007A7E07 /* AP_pubsymph.png in Resources */,
+				EB0C82DD1212A5BD007A7E07 /* AP_right_femur.png in Resources */,
+				EB0C82DE1212A5BD007A7E07 /* AP_right_JSW.png in Resources */,
+				EB0C82DF1212A5BD007A7E07 /* AP_right_lateral.png in Resources */,
+				EB0C82E01212A5BD007A7E07 /* AP_right_medial.png in Resources */,
+				EB0C830F1212B238007A7E07 /* AP_left_JSW.png in Resources */,
+				EB0C83291212C57D007A7E07 /* AP_saccocc.png in Resources */,
+				EBDA620B1222E26600E6102A /* FP_anterior.png in Resources */,
+				EBDA620D1222E26F00E6102A /* FP_femur.png in Resources */,
+				EBFEE8901223ED3800A845C6 /* Frog_left_circle.png in Resources */,
+				EBFEE8911223ED3800A845C6 /* Frog_left_femur.png in Resources */,
+				EBFEE8921223ED3800A845C6 /* Frog_left_narrowest.png in Resources */,
+				EBFEE8931223ED3800A845C6 /* Frog_right_circle.png in Resources */,
+				EBFEE8941223ED3800A845C6 /* Frog_right_femur.png in Resources */,
+				EBFEE8951223ED3800A845C6 /* Frog_right_narrowest.png in Resources */,
+				EB7AE86513206A4700154284 /* pointFrogScfeShaftSuperiorRight.png in Resources */,
+				EB7AE86613206A4700154284 /* pointFrogScfeShaftSuperiorLeft.png in Resources */,
+				EB7AE86713206A4700154284 /* pointFrogScfeShaftInferiorRight.png in Resources */,
+				EB7AE86813206A4700154284 /* pointFrogScfeShaftInferiorLeft.png in Resources */,
+				EB7AE86913206A4700154284 /* pointFrogScfeNarrowestFemoralNeckRight.png in Resources */,
+				EB7AE86A13206A4700154284 /* pointFrogScfeNarrowestFemoralNeckLeft.png in Resources */,
+				EB7AE86B13206A4700154284 /* pointFrogScfeMetaphysisRight.png in Resources */,
+				EB7AE86C13206A4700154284 /* pointFrogScfeMetaphysisLeft.png in Resources */,
+				EB7AE86D13206A4700154284 /* pointFrogScfeFemoralHeadRight.png in Resources */,
+				EB7AE86E13206A4700154284 /* pointFrogScfeFemoralHeadLeft.png in Resources */,
+				EB7AE86F13206A4700154284 /* pointFrogScfeFemoralHeadExceedsCircleRight.png in Resources */,
+				EB7AE87013206A4700154284 /* pointFrogScfeFemoralHeadExceedsCircleLeft.png in Resources */,
+				EB7AE87113206A4700154284 /* pointFrogScfeEpiphysisSuperiorRight.png in Resources */,
+				EB7AE87213206A4700154284 /* pointFrogScfeEpiphysisSuperiorLeft.png in Resources */,
+				EB7AE87313206A4700154284 /* pointFrogScfeEpiphysisInferiorRight.png in Resources */,
+				EB7AE87413206A4700154284 /* pointFrogScfeEpiphysisInferiorLeft.png in Resources */,
+				EB7AE87513206A4700154284 /* pointFrogScfeAlphaAdjustRight.png in Resources */,
+				EB7AE87613206A4700154284 /* pointFrogScfeAlphaAdjustLeft.png in Resources */,
+				EB7AE87713206A4700154284 /* pointFrogAnteriorFemoralNeckRight.png in Resources */,
+				EB7AE87813206A4700154284 /* pointFrogAnteriorFemoralNeckLeft.png in Resources */,
+				EB412408152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png in Resources */,
+				EB412409152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png in Resources */,
+				EB41240A152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckLeft.png in Resources */,
+				EB41240B152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckRight.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D5B49B5048680CD000E48DA /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE4463512004A75009C44B9 /* ResultsManager.m in Sources */,
+				EBE447C61200878A009C44B9 /* RoiManager.m in Sources */,
+				EB0C84101212F008007A7E07 /* OrthopaedicStudioFilter.m in Sources */,
+				EB1FEE7A12D382F900732EC2 /* AppControllerMenu.m in Sources */,
+				EBF66C3C12F03D5300A07616 /* LicenceManager.m in Sources */,
+				EBF66C4012F03D6B00A07616 /* MACAddressManager.m in Sources */,
+				EBFA62C812F6AC9200C69703 /* NSAttributedString+Hyperlink.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE6A9A7E08AC840200D0C1EE /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OrthoStudio_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_MODE_FLAG = "u+w,go-w,a+rX";
+				INSTALL_PATH = "@executable_path/../Plug-ins";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Orthopaedic Studio";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = osirixplugin;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		CE6A9A8208AC840200D0C1EE /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = Development;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE6A9A7D08AC840200D0C1EE /* Build configuration list for PBXNativeTarget "Orthopaedic Studio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6A9A7E08AC840200D0C1EE /* Development */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		CE6A9A8108AC840200D0C1EE /* Build configuration list for PBXProject "OrthoStudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE6A9A8208AC840200D0C1EE /* Development */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
