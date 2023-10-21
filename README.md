@@ -3,5 +3,5 @@ Orthopaedic Studio is a tool designed to help orthopaedic specialists perform a 
 
 ## More
 These may be outdated but provide an overview of the plugin:
-- [Introduction](webpage/Orthopaedic_Studio.html)
-- [User Manual](webpage/User_Manual.html)
+- [Introduction](https://web.archive.org/web/20160303223908/http://orthostudio.spectronic.se/orthostudio/Orthopaedic_Studio.html)
+- [User Manual](https://web.archive.org/web/20160303223908/http://orthostudio.spectronic.se/orthostudio/User_Manual.html)
