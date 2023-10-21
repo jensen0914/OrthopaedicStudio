@@ -12,6 +12,7 @@
 		5FD2D6942AE450770026D4CD /* Schedulable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D68F2AE450770026D4CD /* Schedulable.h */; };
 		5FD2D6952AE450770026D4CD /* StaticScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D6902AE450770026D4CD /* StaticScheduler.h */; };
 		5FD2D6962AE450770026D4CD /* OSIWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D6912AE450770026D4CD /* OSIWindowController.h */; };
+		5FD2D6982AE480460026D4CD /* OS_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FD2D6972AE480460026D4CD /* OS_logo.png */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		EB0C82C71212A5AE007A7E07 /* AP_left_femur.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82C61212A5AE007A7E07 /* AP_left_femur.png */; };
@@ -60,10 +61,6 @@
 		EBE4463512004A75009C44B9 /* ResultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE4463312004A75009C44B9 /* ResultsManager.m */; };
 		EBE447C51200878A009C44B9 /* RoiManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE447C31200878A009C44B9 /* RoiManager.h */; };
 		EBE447C61200878A009C44B9 /* RoiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE447C41200878A009C44B9 /* RoiManager.m */; };
-		EBF66C3C12F03D5300A07616 /* LicenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF66C3B12F03D5300A07616 /* LicenceManager.m */; };
-		EBF66C3E12F03D5E00A07616 /* LicenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF66C3D12F03D5E00A07616 /* LicenceManager.h */; };
-		EBF66C4012F03D6B00A07616 /* MACAddressManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF66C3F12F03D6B00A07616 /* MACAddressManager.m */; };
-		EBF66C4212F03D7700A07616 /* MACAddressManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF66C4112F03D7700A07616 /* MACAddressManager.h */; };
 		EBFA62C712F6AC9200C69703 /* NSAttributedString+Hyperlink.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */; };
 		EBFA62C812F6AC9200C69703 /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */; };
 		EBFEE8901223ED3800A845C6 /* Frog_left_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88A1223ED3800A845C6 /* Frog_left_circle.png */; };
@@ -84,6 +81,7 @@
 		5FD2D68F2AE450770026D4CD /* Schedulable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedulable.h; sourceTree = "<group>"; };
 		5FD2D6902AE450770026D4CD /* StaticScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticScheduler.h; sourceTree = "<group>"; };
 		5FD2D6912AE450770026D4CD /* OSIWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSIWindowController.h; sourceTree = "<group>"; };
+		5FD2D6972AE480460026D4CD /* OS_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OS_logo.png; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB0C82C61212A5AE007A7E07 /* AP_left_femur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_femur.png; sourceTree = "<group>"; };
 		EB0C82D11212A5BD007A7E07 /* AP_left_lateral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_lateral.png; sourceTree = "<group>"; };
@@ -132,10 +130,6 @@
 		EBE4463312004A75009C44B9 /* ResultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsManager.m; sourceTree = "<group>"; };
 		EBE447C31200878A009C44B9 /* RoiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoiManager.h; sourceTree = "<group>"; };
 		EBE447C41200878A009C44B9 /* RoiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoiManager.m; sourceTree = "<group>"; };
-		EBF66C3B12F03D5300A07616 /* LicenceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LicenceManager.m; sourceTree = "<group>"; };
-		EBF66C3D12F03D5E00A07616 /* LicenceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LicenceManager.h; sourceTree = "<group>"; };
-		EBF66C3F12F03D6B00A07616 /* MACAddressManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACAddressManager.m; sourceTree = "<group>"; };
-		EBF66C4112F03D7700A07616 /* MACAddressManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACAddressManager.h; sourceTree = "<group>"; };
 		EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
 		EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
 		EBFEE88A1223ED3800A845C6 /* Frog_left_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_left_circle.png; sourceTree = "<group>"; };
@@ -182,6 +176,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FD2D6972AE480460026D4CD /* OS_logo.png */,
 				EB412404152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png */,
 				EB412405152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png */,
 				EB412406152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckLeft.png */,
@@ -296,10 +291,6 @@
 				EBE4463312004A75009C44B9 /* ResultsManager.m */,
 				EBE447C31200878A009C44B9 /* RoiManager.h */,
 				EBE447C41200878A009C44B9 /* RoiManager.m */,
-				EBF66C3D12F03D5E00A07616 /* LicenceManager.h */,
-				EBF66C3B12F03D5300A07616 /* LicenceManager.m */,
-				EBF66C4112F03D7700A07616 /* MACAddressManager.h */,
-				EBF66C3F12F03D6B00A07616 /* MACAddressManager.m */,
 				EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */,
 				EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */,
 			);
@@ -322,8 +313,6 @@
 				EB1FEE7812D382DF00732EC2 /* AppControllerMenu.h in Headers */,
 				5FD2D6932AE450770026D4CD /* Scheduler.h in Headers */,
 				5FD2D6942AE450770026D4CD /* Schedulable.h in Headers */,
-				EBF66C3E12F03D5E00A07616 /* LicenceManager.h in Headers */,
-				EBF66C4212F03D7700A07616 /* MACAddressManager.h in Headers */,
 				5FD2D6952AE450770026D4CD /* StaticScheduler.h in Headers */,
 				EBFA62C712F6AC9200C69703 /* NSAttributedString+Hyperlink.h in Headers */,
 			);
@@ -427,6 +416,7 @@
 				EB412409152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png in Resources */,
 				EB41240A152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckLeft.png in Resources */,
 				EB41240B152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckRight.png in Resources */,
+				5FD2D6982AE480460026D4CD /* OS_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,8 +441,6 @@
 				EBE447C61200878A009C44B9 /* RoiManager.m in Sources */,
 				EB0C84101212F008007A7E07 /* OrthopaedicStudioFilter.m in Sources */,
 				EB1FEE7A12D382F900732EC2 /* AppControllerMenu.m in Sources */,
-				EBF66C3C12F03D5300A07616 /* LicenceManager.m in Sources */,
-				EBF66C4012F03D6B00A07616 /* MACAddressManager.m in Sources */,
 				EBFA62C812F6AC9200C69703 /* NSAttributedString+Hyperlink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +462,7 @@
 		CE6A9A7E08AC840200D0C1EE /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
@@ -509,6 +498,7 @@
 				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "\"/Applications/OsiriX MD.app/Contents/Frameworks\"";
+				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",

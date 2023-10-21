@@ -8,7 +8,7 @@
 //  PURPOSE.
 // =========================================================================
 
-#import "AppControllerMenu.h"
+//#import "AppControllerMenu.h"
 #import <OsiriXAPI/AppController.h>
 #import <AppKit/AppKit.h>
 

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
+	<string>en_US</string>
 	<key>CFBundleExecutable</key>
 	<string>Orthopaedic Studio</string>
 	<key>CFBundleIconFile</key>
@@ -13,7 +13,7 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleSignature</key>
-	<string>????</string>
+	<string></string>
 	<key>CFBundleVersion</key>
 	<string>1.4.0</string>
 	<key>MenuTitles</key>
@@ -23,10 +23,13 @@
 		<string>False Profile</string>
 		<string>Frog</string>
 		<string>Alpha angle</string>
-		<string>Register OrthoStudio!</string>
 	</array>
 	<key>NSPrincipalClass</key>
 	<string>OrthopaedicStudioFilter</string>
+	<key>ToolbarIcon</key>
+	<string>OS_logo.png</string>
+	<key>allowToolbarIcon</key>
+	<true/>
 	<key>pluginType</key>
 	<string>roiTool</string>
 </dict>

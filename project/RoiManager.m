@@ -13,7 +13,7 @@
 
 #import <OsiriXAPI/Notifications.h>
 #import <OsiriXAPI/PluginFilter.h>
-#import <OrthopaedicStudioFilter.h>
+#import "OrthopaedicStudioFilter.h"
 #import "RoiManager.h"
 #import <Foundation/Foundation.h>
 
@@ -2925,118 +2925,118 @@
 		
 		switch (stepNbr) {
 			case 1:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"AP_right_femur" ofType:@"png"];
 				next_Step = 4;
 				break;			
 			case 2:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"AP_right_femur" ofType:@"png"];
 				next_Step = 4;
 				break;			
 			case 3:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"AP_right_femur" ofType:@"png"];
 				next_Step = 4;
 				break;
             case 4:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 2 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select two points across the right femoral neck at the narrowest region."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 2 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select two points across the right femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"pointAPNarrowestFemoralNeckRight" ofType:@"png"];
 				next_Step = 6;
 				break;
 			case 5:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 2 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select two points across the right femoral neck at the narrowest region."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 2 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select two points across the right femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"pointAPNarrowestFemoralNeckRight" ofType:@"png"];
 				next_Step = 6;
 				break;
 			case 6:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 3 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select the point where the right femoral head or neck first exceeds the circle anteriorally"];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 3 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select the point where the right femoral head or neck first exceeds the circle anteriorally"];
 				imageName = [pluginBundle pathForResource:@"pointAPFemoralHeadExceedsCircleRight" ofType:@"png"];
 				break;    
 			case 7:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 4 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select the LATERAL edge of the right sourcil."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 4 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select the LATERAL edge of the right sourcil."];
 				imageName = [pluginBundle pathForResource:@"AP_right_lateral" ofType:@"png"];
 				break;
 			case 8:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 5 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select the MEDIAL edge of the right sourcil."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 5 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select the MEDIAL edge of the right sourcil."];
 				imageName = [pluginBundle pathForResource:@"AP_right_medial" ofType:@"png"];
 				break;
 			case 9:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 6 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select one point of the right sourcil which is at the narrowest region of joint (radial to femoral head)"];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 6 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select one point of the right sourcil which is at the narrowest region of joint (radial to femoral head)"];
 				imageName = [pluginBundle pathForResource:@"AP_right_JSW" ofType:@"png"];
 				break;	
 			case 10:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 7 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 7 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"AP_left_femur" ofType:@"png"];
 				next_Step = 13;
 				break;
 			case 11:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 7 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 7 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"AP_left_femur" ofType:@"png"];
 				next_Step = 13;
 				break;
 			case 12:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 7 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 7 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"AP_left_femur" ofType:@"png"];
 				next_Step = 13;
 				break;	
             case 13:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 8 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select two points across the left femoral neck at the narrowest region."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 8 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select two points across the left femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"pointAPNarrowestFemoralNeckLeft" ofType:@"png"];
 				next_Step = 15;
 				break;
 			case 14:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 8 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select two points across the left femoral neck at the narrowest region."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 8 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select two points across the left femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"pointAPNarrowestFemoralNeckLeft" ofType:@"png"];
 				next_Step = 15;
 				break;
 			case 15:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 9 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select the point where the left femoral head or neck first exceeds the circle anteriorally"];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 9 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select the point where the left femoral head or neck first exceeds the circle anteriorally"];
 				imageName = [pluginBundle pathForResource:@"pointAPFemoralHeadExceedsCircleLeft" ofType:@"png"];
 				break;    
 			case 16:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 10 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select the LATERAL edge of the left sourcil."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 10 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select the LATERAL edge of the left sourcil."];
 				imageName = [pluginBundle pathForResource:@"AP_left_lateral" ofType:@"png"];
 				break;
 			case 17:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 11 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select the MEDIAL edge of the left sourcil."];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 11 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select the MEDIAL edge of the left sourcil."];
 				imageName = [pluginBundle pathForResource:@"AP_left_medial" ofType:@"png"];
 				break;
 			case 18:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 12 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select one point of the left sourcil which is at the narrowest region of joint (radial to femoral head)"];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 12 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select one point of the left sourcil which is at the narrowest region of joint (radial to femoral head)"];
 				imageName = [pluginBundle pathForResource:@"AP_left_JSW" ofType:@"png"];
 				break;
 			case 19:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 13 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to coccyx and symphysis. Then select the middle of the sacrococcygeal joint"];
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 13 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Pan and zoom to coccyx and symphysis. Then select the middle of the sacrococcygeal joint"];
 				imageName = [pluginBundle pathForResource:@"AP_saccocc" ofType:@"png"];
 				break;
 			case 20:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 14 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"Select the top of the pubic symphysis"];	
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 14 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"Select the top of the pubic symphysis"];	
 				imageName = [pluginBundle pathForResource:@"AP_pubsymph" ofType:@"png"];
 				break;			
 			case 21:
-				[mainFilter->text_AP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 15 of 15)"];
-				[mainFilter->text_AP_RoiInstructions setTitleWithMnemonic:@"All markers are now positioned. Note that the markers can still be moved.\n\nClick forward to review the results."];				
+				[mainFilter->text_AP_RoiInstructionsStep setStringValue:@"Instructions (step 15 of 15)"];
+				[mainFilter->text_AP_RoiInstructions setStringValue:@"All markers are now positioned. Note that the markers can still be moved.\n\nClick forward to review the results."];				
 				imageName = @"";
 				
 				[mainFilter->button_SkipThis setTransparent:YES];
@@ -3057,31 +3057,31 @@
 		
 		switch (stepNbr) {
 			case 1:
-				[mainFilter->text_FP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 3)"];
-				[mainFilter->text_FP_RoiInstructions setTitleWithMnemonic:@"Select three points along the spherical curvature of either the right or the left femoral head."];
+				[mainFilter->text_FP_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 3)"];
+				[mainFilter->text_FP_RoiInstructions setStringValue:@"Select three points along the spherical curvature of either the right or the left femoral head."];
 				imageName = [pluginBundle pathForResource:@"FP_femur" ofType:@"png"];
 				next_Step = 4;
 				break;			
 			case 2:
-				[mainFilter->text_FP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 3)"];
-				[mainFilter->text_FP_RoiInstructions setTitleWithMnemonic:@"Select three points along the spherical curvature of either the right or the left femoral head."];
+				[mainFilter->text_FP_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 3)"];
+				[mainFilter->text_FP_RoiInstructions setStringValue:@"Select three points along the spherical curvature of either the right or the left femoral head."];
 				imageName = [pluginBundle pathForResource:@"FP_femur" ofType:@"png"];
 				next_Step = 4;
 				break;			
 			case 3:
-				[mainFilter->text_FP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 3)"];
-				[mainFilter->text_FP_RoiInstructions setTitleWithMnemonic:@"Select three points along the spherical curvature of either the right or the left femoral head."];
+				[mainFilter->text_FP_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 3)"];
+				[mainFilter->text_FP_RoiInstructions setStringValue:@"Select three points along the spherical curvature of either the right or the left femoral head."];
 				imageName = [pluginBundle pathForResource:@"FP_femur" ofType:@"png"];
 				next_Step = 4;
 				break;	
 			case 4:
-				[mainFilter->text_FP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 2 of 3)"];
-				[mainFilter->text_FP_RoiInstructions setTitleWithMnemonic:@"Select the ANTERIOR edge of the sourcil."];
+				[mainFilter->text_FP_RoiInstructionsStep setStringValue:@"Instructions (step 2 of 3)"];
+				[mainFilter->text_FP_RoiInstructions setStringValue:@"Select the ANTERIOR edge of the sourcil."];
 				imageName = [pluginBundle pathForResource:@"FP_anterior" ofType:@"png"];
 				break;	
 			case 5:
-				[mainFilter->text_FP_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 3 of 3)"];
-				[mainFilter->text_FP_RoiInstructions setTitleWithMnemonic:@"All markers are now positioned. Note that the markers can still be moved.\n\nClick forward to review the results."];				
+				[mainFilter->text_FP_RoiInstructionsStep setStringValue:@"Instructions (step 3 of 3)"];
+				[mainFilter->text_FP_RoiInstructions setStringValue:@"All markers are now positioned. Note that the markers can still be moved.\n\nClick forward to review the results."];				
 				imageName = @"";
 				
 				[mainFilter->button_FP_SkipThis setTransparent:YES];
@@ -3102,88 +3102,88 @@
 		
 		switch (stepNbr) {
 			case 1:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"Frog_right_femur" ofType:@"png"];				
 				next_Step = 4;
 				break;			
 			case 2:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"Frog_right_femur" ofType:@"png"];				
 				next_Step = 4;
 				break;			
 			case 3:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Pan and zoom to RIGHT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"Frog_right_femur" ofType:@"png"];				
 				next_Step = 4;
 				break;	
 			case 4:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 2 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points across the right femoral neck at the narrowest region."];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 2 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points across the right femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"Frog_right_narrowest" ofType:@"png"];
 				next_Step = 6;
 				break;
 			case 5:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 2 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points across the right femoral neck at the narrowest region."];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 2 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points across the right femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"Frog_right_narrowest" ofType:@"png"];
 				next_Step = 6;
 				break;
 			case 6:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 3 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select the point where the right femoral head or neck first exceeds the circle anteriorally"];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 3 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select the point where the right femoral head or neck first exceeds the circle anteriorally"];
 				imageName = [pluginBundle pathForResource:@"Frog_right_circle" ofType:@"png"];
 				break;
 			case 7:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 4 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select a point at the anteriormost aspect of the right femoral neck"];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 4 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select a point at the anteriormost aspect of the right femoral neck"];
 				imageName = [pluginBundle pathForResource:@"pointFrogAnteriorFemoralNeckRight" ofType:@"png"];
 				break;				
 			case 8:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 5 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 5 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"Frog_left_femur" ofType:@"png"];
 				next_Step = 11;
 				break;
 			case 9:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 5 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 5 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"Frog_left_femur" ofType:@"png"];
 				next_Step = 11;
 				break;
 			case 10:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 5 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 5 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Pan and zoom to LEFT joint. Then select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"Frog_left_femur" ofType:@"png"];
 				next_Step = 11;
 				break;	
 			case 11:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 6 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points across the left femoral neck at the narrowest region."];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 6 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points across the left femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"Frog_left_narrowest" ofType:@"png"];
 				next_Step = 13;
 				break;
 			case 12:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 6 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points across the left femoral neck at the narrowest region."];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 6 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points across the left femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"Frog_left_narrowest" ofType:@"png"];
 				next_Step = 13;
 				break;
 			case 13:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 7 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select the point where the left femoral head or neck first exceeds the circle anteriorally"];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 7 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select the point where the left femoral head or neck first exceeds the circle anteriorally"];
 				imageName = [pluginBundle pathForResource:@"Frog_left_circle" ofType:@"png"];
 				break;
 			case 14:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 8 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select a point at the anteriormost aspect of the left femoral neck"];
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 8 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select a point at the anteriormost aspect of the left femoral neck"];
 				imageName = [pluginBundle pathForResource:@"pointFrogAnteriorFemoralNeckLeft" ofType:@"png"];; //CS fix!
 				break;
 			case 15:
-				[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 9 of 9)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"All markers are now positioned. Note that the markers can still be moved.\n\nClick forward to review the results."];				
+				[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 9 of 9)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"All markers are now positioned. Note that the markers can still be moved.\n\nClick forward to review the results."];				
 				imageName = @"";
 				
 				[mainFilter->button_Frog_SkipThis setTransparent:YES];
@@ -3204,144 +3204,144 @@
 			
 			switch (stepNbr) {
 				case 1:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to RIGHT joint. Then select the point marking the superior edge of the epiphysis"];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Pan and zoom to RIGHT joint. Then select the point marking the superior edge of the epiphysis"];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeEpiphysisSuperiorRight" ofType:@"png"];
 					break;			
 				case 2:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 2 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select the point marking the inferior edge of the epiphysis"];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 2 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select the point marking the inferior edge of the epiphysis"];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeEpiphysisInferiorRight" ofType:@"png"];
 					break;			
 				case 3:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 3 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select a point along the spherical curvature of the femoral head."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 3 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select a point along the spherical curvature of the femoral head."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeFemoralHeadRight" ofType:@"png"];
 					break;	
 				case 4:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 4 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points across the right femoral neck at the narrowest region."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 4 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points across the right femoral neck at the narrowest region."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeNarrowestFemoralNeckRight" ofType:@"png"];
 					next_Step = 6;
 					break;
 				case 5:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 4 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points across the right femoral neck at the narrowest region."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 4 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points across the right femoral neck at the narrowest region."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeNarrowestFemoralNeckRight" ofType:@"png"];
 					next_Step = 6;
 					break;
 				case 6:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 5 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select the point where the right femoral head or neck first exceeds the circle anteriorally"];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 5 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select the point where the right femoral head or neck first exceeds the circle anteriorally"];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeFemoralHeadExceedsCircleRight" ofType:@"png"];
 					break;
 				case 7:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 6 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"A point has been automatically placed. Adjust this point so that the associated line follows the center of the femoral neck"];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 6 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"A point has been automatically placed. Adjust this point so that the associated line follows the center of the femoral neck"];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeAlphaAdjustRight" ofType:@"png"];
 					break;				
 				case 8:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 7 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points along the superior edge of the shaft."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 7 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points along the superior edge of the shaft."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeShaftSuperiorRight" ofType:@"png"];
 					waiting_for_alpha_adjust_right_flag = 0;
 					next_Step = 10;
 					break;
 				case 9:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 7 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points along the superior edge of the shaft."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 7 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points along the superior edge of the shaft."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeShaftSuperiorRight" ofType:@"png"];
 					next_Step = 10;
 					break;
 				case 10:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 8 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points along the inferior edge of the shaft."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 8 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points along the inferior edge of the shaft."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeShaftInferiorRight" ofType:@"png"];
 					next_Step = 12;
 					break;	
 				case 11:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 8 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points along the inferior edge of the shaft."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 8 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points along the inferior edge of the shaft."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeShaftInferiorRight" ofType:@"png"];
 					next_Step = 12;
 					break;
 				case 12:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 9 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select the point marking the superior edge of the metaphysis."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 9 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select the point marking the superior edge of the metaphysis."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeMetaphysisRight" ofType:@"png"];
 					break;
 				
 				case 13:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 10 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Pan and zoom to LEFT joint. Then select the point marking the superior edge of the epiphysis"];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 10 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Pan and zoom to LEFT joint. Then select the point marking the superior edge of the epiphysis"];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeEpiphysisSuperiorLeft" ofType:@"png"];
 					break;			
 				case 14:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 11 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select the point marking the inferior edge of the epiphysis"];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 11 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select the point marking the inferior edge of the epiphysis"];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeEpiphysisInferiorLeft" ofType:@"png"];
 					break;			
 				case 15:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 12 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select a point along the spherical curvature of the femoral head."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 12 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select a point along the spherical curvature of the femoral head."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeFemoralHeadLeft" ofType:@"png"];
 					break;	
 				case 16:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 13 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points across the left femoral neck at the narrowest region."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 13 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points across the left femoral neck at the narrowest region."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeNarrowestFemoralNeckLeft" ofType:@"png"];
 					next_Step = 18;
 					break;
 				case 17:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 13 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points across the left femoral neck at the narrowest region."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 13 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points across the left femoral neck at the narrowest region."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeNarrowestFemoralNeckLeft" ofType:@"png"];
 					next_Step = 18;
 					break;
 				case 18:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 14 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select the point where the left femoral head or neck first exceeds the circle anteriorally"];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 14 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select the point where the left femoral head or neck first exceeds the circle anteriorally"];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeFemoralHeadExceedsCircleLeft" ofType:@"png"];
 					break;
 				case 19:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 15 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"A point has been automatically placed. Adjust this point so that the associated line follows the center of the femoral neck"];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 15 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"A point has been automatically placed. Adjust this point so that the associated line follows the center of the femoral neck"];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeAlphaAdjustLeft" ofType:@"png"];
 					break;				
 				case 20:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 16 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points along the superior edge of the shaft."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 16 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points along the superior edge of the shaft."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeShaftSuperiorLeft" ofType:@"png"];
 					waiting_for_alpha_adjust_left_flag = 0;
 					next_Step = 22;
 					break;
 				case 21:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 16 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points along the superior edge of the shaft."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 16 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points along the superior edge of the shaft."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeShaftSuperiorLeft" ofType:@"png"];
 					next_Step = 22;
 					break;
 				case 22:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 17 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points along the inferior edge of the shaft."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 17 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points along the inferior edge of the shaft."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeShaftInferiorLeft" ofType:@"png"];
 					next_Step = 24;
 					break;	
 				case 23:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 17 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points along the inferior edge of the shaft."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 17 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points along the inferior edge of the shaft."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeShaftInferiorLeft" ofType:@"png"];
 					next_Step = 24;
 					break;
 				case 24:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 18 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select the point marking the superior edge of the metaphysis."];
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 18 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select the point marking the superior edge of the metaphysis."];
 					imageName = [pluginBundle pathForResource:@"pointFrogScfeMetaphysisLeft" ofType:@"png"];
 					break;	
 					
 				case 25:
-					[mainFilter->text_Frog_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 19 of 19)"];
-					[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"All markers are now positioned. Note that the markers can still be moved.\n\nClick forward to review the results."];				
+					[mainFilter->text_Frog_RoiInstructionsStep setStringValue:@"Instructions (step 19 of 19)"];
+					[mainFilter->text_Frog_RoiInstructions setStringValue:@"All markers are now positioned. Note that the markers can still be moved.\n\nClick forward to review the results."];				
 					imageName = @"";
 					
 					[mainFilter->button_Frog_SkipThis setTransparent:YES];
@@ -3354,7 +3354,7 @@
 		
 		if (imageName != NULL) {
 			[mainFilter->image_Frog_RoiInstructions setImage:[[NSImage alloc] initWithContentsOfFile:imageName]];
-			[mainFilter->image_Frog_RoiInstructions setImageScaling:NSScaleNone];
+			[mainFilter->image_Frog_RoiInstructions setImageScaling:NSImageScaleNone];
 		}
         
 	} else if(op_mode == Alpha) {
@@ -3364,78 +3364,78 @@
 		
 		switch (stepNbr) {
 			case 1:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"Frog_right_femur" ofType:@"png"];
 				next_Step = 4;
 				break;			
 			case 2:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"Frog_right_femur" ofType:@"png"];
 				next_Step = 4;
 				break;			
 			case 3:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 1 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select three points along the spherical curvature of the femoral head."];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 1 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select three points along the spherical curvature of the femoral head."];
 				imageName = [pluginBundle pathForResource:@"Frog_right_femur" ofType:@"png"];
 				next_Step = 4;
 				break;
             case 4:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 2 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select two points across the femoral neck at the narrowest region."];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 2 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select two points across the femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"Frog_right_narrowest" ofType:@"png"];
 				next_Step = 6;
 				break;
 			case 5:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 2 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select two points across the femoral neck at the narrowest region."];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 2 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select two points across the femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"Frog_right_narrowest" ofType:@"png"];
 				next_Step = 6;
 				break;
 			case 6:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 3 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select the point where the femoral head or neck first exceeds the circle anteriorally"];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 3 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select the point where the femoral head or neck first exceeds the circle anteriorally"];
 				imageName = [pluginBundle pathForResource:@"Frog_right_circle" ofType:@"png"];
 				break;    
 			case 7:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 4 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select three points along the spherical curvature of the opposite femoral head. Or click the results button to skip the opposite side."];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 4 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select three points along the spherical curvature of the opposite femoral head. Or click the results button to skip the opposite side."];
 				imageName = [pluginBundle pathForResource:@"Frog_left_femur" ofType:@"png"];
 				next_Step = 10;
 				break;
 			case 8:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 4 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select three points along the spherical curvature of the opposite femoral head. Or click the results button to skip the opposite side."];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 4 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select three points along the spherical curvature of the opposite femoral head. Or click the results button to skip the opposite side."];
 				imageName = [pluginBundle pathForResource:@"Frog_left_femur" ofType:@"png"];
 				next_Step = 10;
 				break;
 			case 9:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 4 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select three points along the spherical curvature of the opposite femoral head. Or click the results button to skip the opposite side."];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 4 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select three points along the spherical curvature of the opposite femoral head. Or click the results button to skip the opposite side."];
 				imageName = [pluginBundle pathForResource:@"Frog_left_femur" ofType:@"png"];
 				next_Step = 10;
 				break;	
             case 10:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 5 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select two points across the femoral neck at the narrowest region."];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 5 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select two points across the femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"Frog_left_narrowest" ofType:@"png"];
 				next_Step = 12;
 				break;
 			case 11:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 5 of 7)"];
-				[mainFilter->text_Frog_RoiInstructions setTitleWithMnemonic:@"Select two points across the femoral neck at the narrowest region."];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 5 of 7)"];
+				[mainFilter->text_Frog_RoiInstructions setStringValue:@"Select two points across the femoral neck at the narrowest region."];
 				imageName = [pluginBundle pathForResource:@"Frog_left_narrowest" ofType:@"png"];
 				next_Step = 12;
 				break;
 			case 12:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 6 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"Select the point where the femoral head or neck first exceeds the circle anteriorally"];
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 6 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"Select the point where the femoral head or neck first exceeds the circle anteriorally"];
 				imageName = [pluginBundle pathForResource:@"Frog_left_circle" ofType:@"png"];
 				break;  
             case 13:
-				[mainFilter->text_Alpha_RoiInstructionsStep setTitleWithMnemonic:@"Instructions (step 7 of 7)"];
-				[mainFilter->text_Alpha_RoiInstructions setTitleWithMnemonic:@"All markers are now positioned. Note that the markers can still be moved.\n\nClick forward to review the results."];				
+				[mainFilter->text_Alpha_RoiInstructionsStep setStringValue:@"Instructions (step 7 of 7)"];
+				[mainFilter->text_Alpha_RoiInstructions setStringValue:@"All markers are now positioned. Note that the markers can still be moved.\n\nClick forward to review the results."];				
 				imageName = @"";
 				
 				[mainFilter->button_Alpha_SkipThis setTransparent:YES];

@@ -11,19 +11,17 @@
 //  PURPOSE.
 // =========================================================================
 
-//#import <OsiriX Headers/AppController.h>
-#import "AppControllerMenu.h"
+#import <OsiriXAPI/AppController.h>
+//#import "AppControllerMenu.h"
 #import "OrthopaedicStudioFilter.h"
 #import <OsiriXAPI/Notifications.h>
 #import "RoiManager.h"
 #import "ResultsManager.h"
-#import "LicenceManager.h"
 #import "NSAttributedString+Hyperlink.h"
 
 
 ResultsManager *resultsManager;
 RoiManager *roiManager;
-LicenceManager *licenseManager;
 
 
 @implementation OrthopaedicStudioFilter
@@ -33,9 +31,6 @@ LicenceManager *licenseManager;
 	
 	int newOpMode;
 	int curr_step;
-	int license_check;
-	int license_days_left;
-	NSString* license_info;
 	int frog_mode;
 	
 	// wait for nib to be loaded if first time starting
@@ -61,25 +56,6 @@ LicenceManager *licenseManager;
 		newOpMode = Frog;
     } else if([menuName rangeOfString:@"Alpha angle"].location != NSNotFound) {
 		newOpMode = Alpha;
-	} else if([menuName rangeOfString:@"Register OrthoStudio!"].location != NSNotFound) {
-		//NSRunInformationalAlertPanel(@"Register!", @"" , @"Quit", 0L, 0L);
-		
-						
-		[registrationWindow makeKeyAndOrderFront:self];
-		
-		// tell textview not to use default attributes 
-		[textView_Reg_HyperLink setLinkTextAttributes:nil];
-		
-		NSURL *url = [NSURL URLWithString:TEXT_ORTHO_URL];
-		NSAttributedString *attrString = [NSAttributedString hyperlinkFromString:TEXT_ORTHO_URL withURL:url color:[NSColor yellowColor] size:13 alignment:NSCenterTextAlignment];
-		
-		// remove background (which is visible only to make it easier to position object in interface builder)
-		[textView_Reg_HyperLink setDrawsBackground:NO];
-
-		[[textView_Reg_HyperLink textStorage] setAttributedString:attrString];		
-		
-		return 0;
-		
 	} else {
 		return 0;
 	}
@@ -132,26 +108,14 @@ LicenceManager *licenseManager;
 		
 	} 
 	
-	// if first time starting then show disclaimer and perform license check
+	// if first time starting then show disclaimer
 	if(Op_Mode == NoInit) {
-		
-		//local license check
-		if(licenseManager) {
-			license_check = [licenseManager checkLicense:VerifyLocal:&license_days_left:&license_info];
-			
-			if([self performLicenseAction: license_check: VerifyLocal: license_days_left: license_info] == NO) {				
-				return 0;					
-			}
-			
-			// initate remote license check
-			[licenseManager checkLicense:VerifyRemote:NULL:NULL];
-			
-		} else {
-			// if license manager has failed to initilaize
-			NSRunInformationalAlertPanel(@"Error!", @"An unexpected error occured while initializing Orthopaedic Studio (error code 1201)\n\nPlease inform the author about this error (carl.siversson@med.lu.se)" , @"Quit", 0L, 0L);
+		if(NSRunInformationalAlertPanel(@"Orthopaedic Studio Disclaimer",
+										[NSString stringWithFormat:@"%@%@", TEXT_REG_DISCLAIMER1, TEXT_REG_DISCLAIMER2],
+										@"Stop", @"Continue", NULL) == NSAlertDefaultReturn) {
+			[self closePlugin];
 			return 0;
 		}
-		
 	}	
 	
 	Op_Mode = newOpMode;	
@@ -297,45 +261,10 @@ LicenceManager *licenseManager;
 	Op_Mode = NoInit;
 	
 	blankMenuItem = NULL;
-	registerMenuItem = NULL;
 	
 	setMenuIsCalledFlag = NO;
 	filterImageIsCalledFlag = NO;
 	callFilterImageWhenNibIsLoadedFlag = NO;
-
-	
-	// licencemanager should never be deallocated (except for on dealloc of course)
-	licenseManager = [[LicenceManager alloc] initWithFilterClass:self];
-	
-	/*
-	// initialize monitoring for shortkeys (old way)
-	Short_Key_Monitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyDownMask handler:^(NSEvent *event) {		
-		NSString *characters = [event charactersIgnoringModifiers];
-		NSUInteger modifierFlags = [event modifierFlags];
-
-		// first check if the correct modifier keys are pressed
-		if(((modifierFlags & NSControlKeyMask) != 0) && ((modifierFlags & NSShiftKeyMask) != 0) && ((modifierFlags & 0xf80000) == 0)) {	
-			// then check for command key
-			if([characters isEqualToString:@"A"]) {
-				//NSLog(@"combination AP");	
-				[self filterImage:@"AP"];
-			} else if ([characters isEqualToString:@"V"]) {
-				//NSLog(@"combination Von Rosen");
-				[self filterImage:@"Von Rosen"];
-			} else if ([characters isEqualToString:@"P"]) {
-				//NSLog(@"combination False Profile");
-				[self filterImage:@"False Profile"];
-			} else if ([characters isEqualToString:@"F"]) {
-				//NSLog(@"combination Frog");
-				[self filterImage:@"Frog"];
-			} else {
-				return event;
-			}
-		} else {
-			return event;
-		}		
-	}];
-	 */
 }
 
 
@@ -377,10 +306,7 @@ LicenceManager *licenseManager;
 			case Alpha_2:
 				[alphaWindow2 performClose:self];
 				break;    
-		}		
-		
-		
-		
+		}
 	} 
 	
 	Op_Mode = NoInit;
@@ -389,20 +315,10 @@ LicenceManager *licenseManager;
 
 -(void)dealloc {
 	
-	//NSLog(@"OrthopaedicStudioFilter dealloc");
-	
-	/* // shut short key monitor down (should this really be in dealloc?)
-	if (Short_Key_Monitor) {
-        [NSEvent removeMonitor:Short_Key_Monitor];		
-        Short_Key_Monitor = nil;
-    } */
-	
 	[blankMenuItem release];
-	[registerMenuItem release];
 	
 	[roiManager release];
 	[resultsManager release];
-	[licenseManager release];
 	
 	if(Curr_Save_File != NULL) {
 		[Curr_Save_File release];
@@ -425,11 +341,6 @@ LicenceManager *licenseManager;
     
     NSMenuItem *comboMeasTitleMenuItem = 0L;
     NSMenuItem *singleMeasTitleMenuItem = 0L;
-	
-	// these are global variables now
-	//NSMenuItem *blankMenuItem = NULL;
-	//NSMenuItem *registerMenuItem = NULL;
-	
 	
 	if(setMenuIsCalledFlag == NO) {
 		setMenuIsCalledFlag = YES;
@@ -479,11 +390,8 @@ LicenceManager *licenseManager;
 			//blankMenuItem = [orthoStudioSubMenu itemWithTitle:@" "];
             blankMenuItem = [NSMenuItem separatorItem];
             [orthoStudioSubMenu insertItem:blankMenuItem atIndex:8];
-            
-			registerMenuItem = [orthoStudioSubMenu itemWithTitle:@"Register OrthoStudio!"];
 			
 			[blankMenuItem retain];
-			[registerMenuItem retain];
 			
             // increase indentation for items
             [apMenuItem setIndentationLevel:1];
@@ -496,173 +404,25 @@ LicenceManager *licenseManager;
           //  [multiMeasTitleMenuItem setEnabled:NO];
             
 			[apMenuItem setKeyEquivalent:@"a"];
-			[apMenuItem setKeyEquivalentModifierMask:NSShiftKeyMask | NSControlKeyMask];
+			[apMenuItem setKeyEquivalentModifierMask:NSEventModifierFlagShift | NSEventModifierFlagControl];
 			
 			[vonRosenMenuItem setKeyEquivalent:@"v"];
-			[vonRosenMenuItem setKeyEquivalentModifierMask:NSShiftKeyMask | NSControlKeyMask];
+			[vonRosenMenuItem setKeyEquivalentModifierMask:NSEventModifierFlagShift | NSEventModifierFlagControl];
 			
 			[falseProfileMenuItem setKeyEquivalent:@"p"];
-			[falseProfileMenuItem setKeyEquivalentModifierMask:NSShiftKeyMask | NSControlKeyMask];
+			[falseProfileMenuItem setKeyEquivalentModifierMask:NSEventModifierFlagShift | NSEventModifierFlagControl];
 			
 			[frogMenuItem setKeyEquivalent:@"f"];
-			[frogMenuItem setKeyEquivalentModifierMask:NSShiftKeyMask | NSControlKeyMask];
+			[frogMenuItem setKeyEquivalentModifierMask:NSEventModifierFlagShift | NSEventModifierFlagControl];
             
             [alphaMenuItem setKeyEquivalent:@"l"];
-			[alphaMenuItem setKeyEquivalentModifierMask:NSShiftKeyMask | NSControlKeyMask];
+			[alphaMenuItem setKeyEquivalentModifierMask:NSEventModifierFlagShift | NSEventModifierFlagControl];
 			
 			// remove register menu if already registered
-			if(licenseManager) {
-				if([licenseManager checkLicense:VerifyLocal:NULL:NULL] == LicenseKeyOk) {
-					[blankMenuItem setHidden:YES];
-					[registerMenuItem setHidden:YES];
-				}
-			}
+			[blankMenuItem setHidden:YES];
 		}
 	}
 }
-
-
-
--(int)performLicenseAction: (int)license_check : (int)checking_mode : (int)days_left : (NSString*)license_info {
-	
-	BOOL ask_eval_switch = NO;
-	BOOL hide_register_menu = NO;
-	BOOL show_reg_window = NO;
-	BOOL quit_plugin = NO;
-	
-	NSURL* url;
-	NSAttributedString *attrString;
-	NSTextView *accessory;
-	NSAlert *alert;
-	
-	switch (license_check) {
-		case LicenseKeyOk:
-				if(license_info) {
-					license_info = [@"\n\nRegistered to " stringByAppendingString:license_info];
-				} else {
-					license_info = @"";
-				}
-				
-				if(NSRunInformationalAlertPanel(@"Orthopaedic Studio Disclaimer", 
-												[NSString stringWithFormat:@"%@%@%@", TEXT_REG_DISCLAIMER1, license_info, TEXT_REG_DISCLAIMER2],
-												@"Stop", @"Continue", NULL) == NSAlertDefaultReturn) {
-					quit_plugin = YES;
-				} else {
-					hide_register_menu = YES;
-				}
-	
-			break;
-			
-		case LicenseKeyRemoteNotExist:	
-			if(NSRunCriticalAlertPanel(@"Orthopaedic Studio registration key is not valid!", 
-									   TEXT_REG_FAIL,
-									   @"Quit", @"Register", NULL) == NSAlertDefaultReturn) {
-				ask_eval_switch = YES;
-			} else {
-				show_reg_window = YES;
-			}
-			quit_plugin = YES;
-			break;
-			
-		case LicenseKeyInUse:
-			
-			url = [NSURL URLWithString:TEXT_ORTHO_TRANSFER_URL];
-			attrString = [NSAttributedString hyperlinkFromString:TEXT_ORTHO_TRANSFER withURL:url color:[NSColor blueColor] size:11.0 alignment:NSLeftTextAlignment];				
-			[attrString appendWithString:TEXT_REG_IN_USE2 size:11.0 align:NSLeftTextAlignment];
-			
-			accessory = [[NSTextView alloc] initWithFrame:NSMakeRect(0,0,400,15)];
-			[accessory setLinkTextAttributes:nil];
-			[accessory insertText:attrString];					
-			[accessory setEditable:NO];
-			[accessory setDrawsBackground:NO];
-			[accessory setFont:[NSFont systemFontOfSize:11.0]];
-			
-			alert = [NSAlert alertWithMessageText:@"This Orthopaedic Studio registration key is in use!" defaultButton:@"Quit" alternateButton: @"Register" otherButton: NULL informativeTextWithFormat:TEXT_REG_IN_USE];
-			
-			[alert setAccessoryView:accessory];
-			
-			
-			if([alert runModal] == NSAlertDefaultReturn) {
-				ask_eval_switch = YES;
-			} else {
-				show_reg_window = YES;
-			}
-			quit_plugin = YES;
-			break;
-			
-		case LicenseKeyBanned:
-			if(NSRunCriticalAlertPanel(@"This Orthopaedic Studio registration key is banned!", 
-									   TEXT_REG_BANNED,
-									   @"Quit", @"Register", NULL) == NSAlertDefaultReturn) {
-				ask_eval_switch = YES;
-			} else {
-				show_reg_window = YES;
-			}
-			quit_plugin = YES;
-			break;
-			
-			
-		case LicenseEvalOk:	
-		
-				switch(NSRunInformationalAlertPanel(@"Orthopaedic Studio Disclaimer", 
-												[NSString stringWithFormat:@"%@%d%@", TEXT_EVAL_DISCLAIMER1, days_left, TEXT_EVAL_DISCLAIMER2],
-													@"Stop", @"Register", @"Continue")) {
-					case NSAlertDefaultReturn: 
-						quit_plugin = YES;
-						break;
-					case NSAlertOtherReturn:
-						break;
-					case NSAlertAlternateReturn:
-						show_reg_window = YES;
-						quit_plugin = YES;
-						break;
-				}		
-			break;	
-			
-		case LicenseEvalExpired:
-			if(NSRunCriticalAlertPanel(@"Orthopaedic Studio evaluation copy has expired!", 
-									   TEXT_EVAL_EXPIRED,
-									   @"Quit", @"Register", 0L) != NSAlertDefaultReturn) {
-				show_reg_window = YES;
-			}
-			quit_plugin = YES;
-			break;		
-			
-		default:			
-			if(NSRunCriticalAlertPanel(@"Orthopaedic Studio registration key error!", 
-									   TEXT_REG_ERROR,
-									   @"Quit", @"Register", NULL) == NSAlertDefaultReturn) {
-				ask_eval_switch = YES;
-			} else {
-				show_reg_window = YES;
-			}
-			quit_plugin = YES;
-			break;
-	}
-	
-	// ask if user wants to switch back to evaluation mode
-	if(ask_eval_switch && days_left>0) {
-		if(NSRunInformationalAlertPanel(@"Continue evaluation period?", 
-									 [NSString stringWithFormat:@"%@%d%@", @"You still have ", days_left, @" more days left of your Orthopaedic Studio evaluation period.\n\nDo you wish to delete the non-working license key that you have entered and continue with your evaluation period?\n\n"],
-										@"Yes", @"No", NULL) == NSAlertDefaultReturn) {
-			[licenseManager deleteLicenseKeyFile];
-		}
-	}
-
-	[blankMenuItem setHidden:hide_register_menu];
-	[registerMenuItem setHidden:hide_register_menu];
-	
-	if(quit_plugin == YES) { 
-		[self closePlugin];
-	}
-	
-	if(show_reg_window == YES) { 
-		[self filterImage:@"Register OrthoStudio!"];
-	}
-	
-	return !quit_plugin;	
-}
-
 
 
 - (BOOL)windowShouldClose:(NSWindow *)sender {
@@ -1117,25 +877,7 @@ LicenceManager *licenseManager;
 
 
 - (IBAction)buttonRegSubmit:(id)sender{
-	
-	NSMutableString*  key = [NSMutableString stringWithString:[textFieldInput_Reg_LicenseKey stringValue]];
-	
-	// remove anything from the key that should not be there
-	[key replaceOccurrencesOfString:@" " withString:@"" options: NSLiteralSearch range: NSMakeRange(0, [key length])];
-	[key replaceOccurrencesOfString:@"-" withString:@"" options: NSLiteralSearch range: NSMakeRange(0, [key length])];
-	[key replaceOccurrencesOfString:@"." withString:@"" options: NSLiteralSearch range: NSMakeRange(0, [key length])];
-	[key replaceOccurrencesOfString:@"_" withString:@"" options: NSLiteralSearch range: NSMakeRange(0, [key length])];
-	[key replaceOccurrencesOfString:@"\t" withString:@"" options: NSLiteralSearch range: NSMakeRange(0, [key length])];
-	[key replaceOccurrencesOfString:@"\n" withString:@"" options: NSLiteralSearch range: NSMakeRange(0, [key length])];
-	[key replaceOccurrencesOfString:@"\r" withString:@"" options: NSLiteralSearch range: NSMakeRange(0, [key length])];
-	
-	
-	if([licenseManager verifyLicenseKey:key]) {
-		[licenseManager saveAndVerifyLicenseKey:key: LicenseKeyOk];
-		[registrationWindow performClose:self];
-	} else {
-		NSRunInformationalAlertPanel(@"Invalid license key", @"The license key you have entered is not a valid Orthopaedic Studio license key. Please check that it has been entered correctly and try again." , @"OK", 0L, 0L);	
-	}
+	[registrationWindow performClose:self];
 }
 
 - (IBAction)buttonRegCancel:(id)sender{

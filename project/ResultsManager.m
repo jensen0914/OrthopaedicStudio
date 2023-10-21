@@ -14,7 +14,7 @@
 #import <OsiriXAPI/Notifications.h>
 //#import "FoundationErrors.h"
 #import <OsiriXAPI/PluginFilter.h>
-#import <OrthopaedicStudioFilter.h>
+#import "OrthopaedicStudioFilter.h"
 #import "RoiManager.h"
 #import "ResultsManager.h"
 #import <OsiriX/DCMObject.h>
@@ -261,15 +261,15 @@
 
 	switch (op_mode) {
 		case AP:
-			[mainFilter->text_AP_XRayView setTitleWithMnemonic:result_AP_XRayView];
-			[mainFilter->text_AP_ShentonLeft setTitleWithMnemonic:result_AP_ShentonLeft];
-			[mainFilter->text_AP_ShentonRight setTitleWithMnemonic:result_AP_ShentonRight];
-			[mainFilter->text_AP_CrossOverLeft setTitleWithMnemonic:result_AP_CrossOverLeft];
-			[mainFilter->text_AP_CrossOverRight setTitleWithMnemonic:result_AP_CrossOverRight];
-			[mainFilter->text_AP_PosteriorWallLeft setTitleWithMnemonic:result_AP_PosteriorWallLeft];
-			[mainFilter->text_AP_PosteriorWallRight setTitleWithMnemonic:result_AP_PosteriorWallRight];
-			[mainFilter->text_AP_TonnisLeft setTitleWithMnemonic:result_AP_TonnisLeft];
-			[mainFilter->text_AP_TonnisRight setTitleWithMnemonic:result_AP_TonnisRight];
+			[mainFilter->text_AP_XRayView setStringValue:result_AP_XRayView];
+			[mainFilter->text_AP_ShentonLeft setStringValue:result_AP_ShentonLeft];
+			[mainFilter->text_AP_ShentonRight setStringValue:result_AP_ShentonRight];
+			[mainFilter->text_AP_CrossOverLeft setStringValue:result_AP_CrossOverLeft];
+			[mainFilter->text_AP_CrossOverRight setStringValue:result_AP_CrossOverRight];
+			[mainFilter->text_AP_PosteriorWallLeft setStringValue:result_AP_PosteriorWallLeft];
+			[mainFilter->text_AP_PosteriorWallRight setStringValue:result_AP_PosteriorWallRight];
+			[mainFilter->text_AP_TonnisLeft setStringValue:result_AP_TonnisLeft];
+			[mainFilter->text_AP_TonnisRight setStringValue:result_AP_TonnisRight];
 			break;
 
 		default:
@@ -282,41 +282,41 @@
 	
 	switch (op_mode) {
 		case AP:
-			[mainFilter->text_AP_LCERight setTitleWithMnemonic:result_AP_LCE_right];
-			[mainFilter->text_AP_LCELeft setTitleWithMnemonic:result_AP_LCE_left];
+			[mainFilter->text_AP_LCERight setStringValue:result_AP_LCE_right];
+			[mainFilter->text_AP_LCELeft setStringValue:result_AP_LCE_left];
 			
-			[mainFilter->text_AP_TonnisAngleRight setTitleWithMnemonic:result_AP_Tonnis_right];
-			[mainFilter->text_AP_TonnisAngleLeft setTitleWithMnemonic:result_AP_Tonnis_left];
+			[mainFilter->text_AP_TonnisAngleRight setStringValue:result_AP_Tonnis_right];
+			[mainFilter->text_AP_TonnisAngleLeft setStringValue:result_AP_Tonnis_left];
 			
-			[mainFilter->text_AP_JSWRight setTitleWithMnemonic:result_AP_JSW_right];
-			[mainFilter->text_AP_JSWLeft setTitleWithMnemonic:result_AP_JSW_left];
+			[mainFilter->text_AP_JSWRight setStringValue:result_AP_JSW_right];
+			[mainFilter->text_AP_JSWLeft setStringValue:result_AP_JSW_left];
 			
-			[mainFilter->text_AP_PelvicTilt setTitleWithMnemonic:result_AP_PelvicTilt];
-			[mainFilter->text_AP_PelvicRot setTitleWithMnemonic:result_AP_PelvicRot];
+			[mainFilter->text_AP_PelvicTilt setStringValue:result_AP_PelvicTilt];
+			[mainFilter->text_AP_PelvicRot setStringValue:result_AP_PelvicRot];
             
-            [mainFilter->text_AP_AlphaRight setTitleWithMnemonic:result_Frog_Alpha_right];
-			[mainFilter->text_AP_AlphaLeft setTitleWithMnemonic:result_Frog_Alpha_left];
+            [mainFilter->text_AP_AlphaRight setStringValue:result_Frog_Alpha_right];
+			[mainFilter->text_AP_AlphaLeft setStringValue:result_Frog_Alpha_left];
 			break;			
 		case FP:			
-			[mainFilter->text_FP_ACE setTitleWithMnemonic:result_FP_ACE];
+			[mainFilter->text_FP_ACE setStringValue:result_FP_ACE];
 			break;
 		case Frog:
 		case FrogScfe:
-			[mainFilter->text_Frog_AlphaRight setTitleWithMnemonic:result_Frog_Alpha_right];
-			[mainFilter->text_Frog_AlphaLeft setTitleWithMnemonic:result_Frog_Alpha_left];
+			[mainFilter->text_Frog_AlphaRight setStringValue:result_Frog_Alpha_right];
+			[mainFilter->text_Frog_AlphaLeft setStringValue:result_Frog_Alpha_left];
 			
-			[mainFilter->text_Frog_HNOffsetRight setTitleWithMnemonic:result_Frog_HNOffset_right];
-			[mainFilter->text_Frog_HNOffsetLeft setTitleWithMnemonic:result_Frog_HNOffset_left];
+			[mainFilter->text_Frog_HNOffsetRight setStringValue:result_Frog_HNOffset_right];
+			[mainFilter->text_Frog_HNOffsetLeft setStringValue:result_Frog_HNOffset_left];
 			
-			[mainFilter->text_FrogScfe_SouthwickRight setTitleWithMnemonic:result_FrogScfe_Southwick_right];
-			[mainFilter->text_FrogSfce_SouthwickLeft setTitleWithMnemonic:result_FrogScfe_Southwick_left];
+			[mainFilter->text_FrogScfe_SouthwickRight setStringValue:result_FrogScfe_Southwick_right];
+			[mainFilter->text_FrogSfce_SouthwickLeft setStringValue:result_FrogScfe_Southwick_left];
 			
-			[mainFilter->text_FrogScfe_EMOffsetRight setTitleWithMnemonic:result_FrogScfe_EMOffset_right];
-			[mainFilter->text_FrogScfe_EMOffsetLeft setTitleWithMnemonic:result_FrogScfe_EMOffset_left];
+			[mainFilter->text_FrogScfe_EMOffsetRight setStringValue:result_FrogScfe_EMOffset_right];
+			[mainFilter->text_FrogScfe_EMOffsetLeft setStringValue:result_FrogScfe_EMOffset_left];
 			break;
         case Alpha:
-			[mainFilter->text_Alpha_AlphaRight setTitleWithMnemonic:result_Frog_Alpha_right];
-			[mainFilter->text_Alpha_AlphaLeft setTitleWithMnemonic:result_Frog_Alpha_left];
+			[mainFilter->text_Alpha_AlphaRight setStringValue:result_Frog_Alpha_right];
+			[mainFilter->text_Alpha_AlphaLeft setStringValue:result_Frog_Alpha_left];
 			break;   
 		default:
 			break;
@@ -330,20 +330,20 @@
 	
 	switch (op_mode) {
 		case AP:
-			[mainFilter->text_AP_SaveFile setTitleWithMnemonic:filename];
+			[mainFilter->text_AP_SaveFile setStringValue:filename];
 			break;
 		case VonRosen:
-			[mainFilter->text_VR_SaveFile setTitleWithMnemonic:filename];
+			[mainFilter->text_VR_SaveFile setStringValue:filename];
 			break;
 		case FP:
-			[mainFilter->text_FP_SaveFile setTitleWithMnemonic:filename];
+			[mainFilter->text_FP_SaveFile setStringValue:filename];
 			break;
 		case Frog:
 		case FrogScfe:	
-			[mainFilter->text_Frog_SaveFile setTitleWithMnemonic:filename];
+			[mainFilter->text_Frog_SaveFile setStringValue:filename];
 			break;
         case Alpha:
-			[mainFilter->text_Alpha_SaveFile setTitleWithMnemonic:filename];
+			[mainFilter->text_Alpha_SaveFile setStringValue:filename];
 			break;    
 		default:
 			break;
