@@ -12,7 +12,7 @@
 // =========================================================================
 
 #import <Foundation/Foundation.h>
-#import "PluginFilter.h"
+#import <OsiriXAPI/PluginFilter.h>
 #import <Cocoa/Cocoa.h>
 //#import "ResultsManager.h"
 
@@ -223,7 +223,7 @@ enum Windows {
 - (long) filterImage:(NSString*) menuName;
 - (void) initPlugin;
 - (void) setMenus;
-- (int)performLicenseAction: (int)license_check: (int)checking_mode: (int)days_left: (NSString*)license_info;
+- (int)performLicenseAction: (int)license_check : (int)checking_mode : (int)days_left : (NSString*)license_info;
 - (void) closePlugin;
 - (IBAction)buttonNextWindow:(id)sender;
 - (IBAction)buttonPrevWindow:(id)sender;

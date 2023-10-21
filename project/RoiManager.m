@@ -11,8 +11,8 @@
 //  PURPOSE.
 // =========================================================================
 
-#import <OsiriX Headers/Notifications.h>
-#import "PluginFilter.h"
+#import <OsiriXAPI/Notifications.h>
+#import <OsiriXAPI/PluginFilter.h>
 #import <OrthopaedicStudioFilter.h>
 #import "RoiManager.h"
 #import <Foundation/Foundation.h>
@@ -182,7 +182,7 @@
 	
 }
 
--(void)restart:(ViewerController*) viewerController:(BOOL) include_prefs {
+-(void)restart :( ViewerController*) viewerController : (BOOL) include_prefs {
 	
 	NSMutableArray  *roiSeriesList;
 	NSMutableArray  *roiImageList;
@@ -325,7 +325,7 @@
 }
 
 
--(void)setStep: (int)step: (int)op_mode{
+-(void)setStep: (int)step : (int)op_mode{
 	
 	switch (op_mode) {
 		case AP:
@@ -370,7 +370,7 @@
 	
 } 
 
--(int)roiAdded:(NSNotification*)notification:(int) op_mode:(ViewerController*) viewerController {
+-(int)roiAdded: (NSNotification*)notification : (int) op_mode : (ViewerController*) viewerController {
 	
 	NSMutableArray  *roiSeriesList;
 	NSMutableArray  *roiImageList;
@@ -894,7 +894,7 @@
 	}
 }
 
--(void)roiSelected:(NSNotification*)notification: (ViewerController*) viewerController {
+-(void)roiSelected: (NSNotification*)notification : (ViewerController*) viewerController {
 	//ROI* roi = [notification object];
 	
 	//if(currentlySelectedRoi != NULL) {
@@ -906,7 +906,7 @@
 	
 }
 
--(void)mouseClicked:(NSNotification*)notification: (ViewerController*) viewerController {
+-(void)mouseClicked: (NSNotification*)notification : (ViewerController*) viewerController {
 
 	//if(currentlySelectedRoi != NULL) {
 	//	if([currentlySelectedRoi ROImode] == 0) {
@@ -918,7 +918,7 @@
 
 
 
--(void)roiChanged:(NSNotification*)notification: (ViewerController*) viewerController:(OrthopaedicStudioFilter*) mainFilter {
+-(void)roiChanged: (NSNotification*)notification : (ViewerController*) viewerController : (OrthopaedicStudioFilter*) mainFilter {
 	
 	ROI* roi = [notification object];
 	//NSLog(@"roiChanged: %@", [roi name]);
@@ -2909,7 +2909,7 @@
 }
 
 
--(void)displayROIInstructions:(int)stepNbr:(int)op_mode:(OrthopaedicStudioFilter*) mainFilter {
+-(void)displayROIInstructions:(int)stepNbr : (int)op_mode : (OrthopaedicStudioFilter*) mainFilter {
 	
 	NSBundle* pluginBundle = [NSBundle bundleForClass:[mainFilter class]];	
 	NSString* imageName = NULL;
@@ -3482,7 +3482,7 @@
 }
 
 
--(int)loadFromExistingPoints:(int) op_mode:(ViewerController*) viewerController {
+-(int)loadFromExistingPoints:(int) op_mode :(ViewerController*) viewerController {
 	
 	NSMutableArray  *roiSeriesList;
 	NSMutableArray  *roiImageList;
@@ -3714,7 +3714,7 @@
 }
 
 
--(BOOL)isRoiOneOfOurs:(ROI*) roi: (BOOL) nullify {
+-(BOOL)isRoiOneOfOurs:(ROI*) roi : (BOOL) nullify {
 
 	
 	

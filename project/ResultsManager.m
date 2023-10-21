@@ -11,14 +11,14 @@
 //  PURPOSE.
 // =========================================================================
 
-#import <OsiriX Headers/Notifications.h>
+#import <OsiriXAPI/Notifications.h>
 //#import "FoundationErrors.h"
-#import "PluginFilter.h"
+#import <OsiriXAPI/PluginFilter.h>
 #import <OrthopaedicStudioFilter.h>
 #import "RoiManager.h"
 #import "ResultsManager.h"
-#import "DCMObject.h"
-#import "dicomFile.h"
+#import <OsiriX/DCMObject.h>
+#import <OsiriXAPI/dicomFile.h>
 
 
 @implementation ResultsManager
@@ -68,10 +68,10 @@
 		case VonRosen:
 			// obs. tagnumreringen är lite inkonsekvent här
 			if ([mainFilter->popUp_VR_JointConLeft selectedTag] == -1) result_VR_JointConLeft = @"N/A";
-			else result_VR_JointConLeft = [NSString stringWithFormat:@"%d", [mainFilter->popUp_VR_JointConLeft selectedTag]];
+			else result_VR_JointConLeft = [NSString stringWithFormat:@"%ld", (long)[mainFilter->popUp_VR_JointConLeft selectedTag]];
 			
 			if ([mainFilter->popUp_VR_JointConRight selectedTag] == -1) result_VR_JointConRight = @"N/A";
-			else result_VR_JointConRight = [NSString stringWithFormat:@"%d", [mainFilter->popUp_VR_JointConRight selectedTag]];
+			else result_VR_JointConRight = [NSString stringWithFormat:@"%ld", (long)[mainFilter->popUp_VR_JointConRight selectedTag]];
 			
 			break;
 		default:
@@ -82,7 +82,7 @@
 	
 }
 
-- (void)readROIResults:(int) op_mode: (RoiManager*) roiManager:(BOOL) update_FP_side {
+- (void)readROIResults: (int) op_mode : (RoiManager*) roiManager : (BOOL) update_FP_side {
 	
 	if(op_mode == AP) {
 		
@@ -171,7 +171,7 @@
 	
 	}
 
-- (void)readROIResultsForFile:(int) op_mode: (RoiManager*) roiManager {
+- (void)readROIResultsForFile: (int) op_mode : (RoiManager*) roiManager {
 	
 	if(op_mode == AP) {
 		
@@ -326,7 +326,7 @@
 }
 
 
-- (void)displaySaveFile:(NSString*) filename:(int) op_mode {
+- (void)displaySaveFile: (NSString*) filename : (int) op_mode {
 	
 	switch (op_mode) {
 		case AP:
@@ -352,7 +352,7 @@
 }
 
 
-- (BOOL)saveResults:(NSString*) filename:(NSString*) separator:(NSString*) decimalSep:(int) opMode:(ViewerController*) viewerController:(RoiManager*) roiManager {
+- (BOOL)saveResults: (NSString*) filename : (NSString*) separator : (NSString*) decimalSep : (int) opMode : (ViewerController*) viewerController : (RoiManager*) roiManager {
 
 	@try {
 		

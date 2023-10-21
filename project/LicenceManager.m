@@ -109,7 +109,7 @@
 //	checkLicense
 //
 //*************************************
--(int) checkLicense:(int) verification_mode: (int*)days_left: (NSString**) license_info{
+-(int) checkLicense:(int) verification_mode : (int*)days_left : (NSString**) license_info{
 
 	NSString *license_key;
 	int eval_days_left;
@@ -120,7 +120,6 @@
 	NSURL *postURL;
 	NSMutableURLRequest *urlRequest;
 	NSString *submission;
-	NSURLConnection *connection;
 	RemoteCheckingMode = CheckingNotActive;
 	
 	license_key_status = [self readAndVerifyLicenseKey: &license_key];
@@ -180,7 +179,6 @@
 			[urlRequest setHTTPMethod:@"POST"];
 			submission = [NSString stringWithFormat:@"indata1=%@&indata2=%@&indata3=%@", CLIENT_PASS,license_key, MacAddress];
 			[urlRequest setHTTPBody:[submission dataUsingEncoding:NSUTF8StringEncoding]];
-			connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
 			
 			
 		} else if(license_key_status == LicenseKeyLocalNotExist){
@@ -199,7 +197,6 @@
 				[urlRequest setHTTPMethod:@"POST"];
 				submission = [NSString stringWithFormat:@"indata1=%@&indata2=%@&indata3=%d", CLIENT_PASS, MacAddress, eval_days_left];
 				[urlRequest setHTTPBody:[submission dataUsingEncoding:NSUTF8StringEncoding]];
-				connection = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
 			} else {
 				//NSLog(@"remote: failed, eval license has expired (locally)");
 				retval = LicenseEvalExpired;
@@ -346,7 +343,7 @@
 //	saveAndVerifyLicenseKey
 //
 //*************************************
-- (BOOL)saveAndVerifyLicenseKey:(NSString*) key: (int) key_status {
+- (BOOL)saveAndVerifyLicenseKey:(NSString*) key : (int) key_status {
 	
 	BOOL retval;
 	NSString* save_file;
@@ -409,11 +406,11 @@
 - (BOOL)verifyLicenseKey:(NSString*) key {
 	
 	unsigned char md5result[16];
-	char *cStr;
+	const char *cStr;
 
 	if ([key length] == 16) {
 		cStr = [[[[key lowercaseString] substringToIndex:8] stringByAppendingString:KEY_SALT] UTF8String];
-		CC_MD5( cStr, strlen(cStr), md5result );
+		CC_MD5( cStr, (CC_LONG)strlen(cStr), md5result );
 		
 		if ([[[key lowercaseString] substringFromIndex:8] isEqualToString:	[NSString stringWithFormat: @"%02x%02x%02x%02x", 
 														md5result[0], md5result[1], md5result[2], md5result[3]]]) {
@@ -596,7 +593,7 @@
 
 		}
 	}
-	RemoteCheckingMode == CheckingNotActive;
+	RemoteCheckingMode = CheckingNotActive;
 	[recievedData release];
 	recievedData = nil;
 }

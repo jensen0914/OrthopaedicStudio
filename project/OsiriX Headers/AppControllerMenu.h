@@ -7,7 +7,7 @@
 //  PURPOSE.
 // =========================================================================
 
-#import <AppController.h>
+#import <OsiriXAPI/AppController.h>
 
 @interface AppController (Menu)
 

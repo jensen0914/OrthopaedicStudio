@@ -162,7 +162,6 @@ static kern_return_t GetMACAddress(io_iterator_t intfIterator, UInt8 *MACAddress
 
 int getPrimaryMACAddressCFunction(UInt8 *MACAddress)
 {
-	int retval;
     kern_return_t	kernResult = KERN_SUCCESS; // on PowerPC this is an int (4 bytes)
 	/*
 	 *	error number layout as follows (see mach/error.h and IOKit/IOReturn.h):
@@ -259,8 +258,8 @@ int getPrimaryMACAddressCFunction(UInt8 *MACAddress)
 		
 		if(create_file == YES) {
 			// make a mac address up 
-			srandom(time(NULL));
-			mac_address_string = [NSString stringWithFormat:@"xx%02x%02x%02x%02x%02x",random()%256, random()%256, random()%256, random()%256, random()%256];
+			srandom((unsigned int)time(NULL));
+			mac_address_string = [NSString stringWithFormat:@"xx%02lx%02lx%02lx%02lx",random()%256, random()%256, random()%256, random()%256];
 			
 			//save to file
 			error = nil;

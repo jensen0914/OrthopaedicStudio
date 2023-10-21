@@ -102,12 +102,12 @@ enum SaveFields {
 
 - (void)initWithMainFilter:(OrthopaedicStudioFilter*) main_filter;
 - (void)readVisualScoreResults:(int) op_mode;
-- (void)readROIResults:(int) op_mode: (RoiManager*) roiManager: (BOOL) update_FP_side;
-- (void)readROIResultsForFile:(int) op_mode: (RoiManager*) roiManager;
+- (void)readROIResults: (int) op_mode : (RoiManager*) roiManager : (BOOL) update_FP_side;
+- (void)readROIResultsForFile: (int) op_mode : (RoiManager*) roiManager;
 - (void)displayVisualScoreResults:(int) op_mode;
 - (void)displayROIResults:(int) op_mode;
-- (void)displaySaveFile:(NSString*) filename:(int) op_mode;
-- (BOOL)saveResults:(NSString*) filename:(NSString*) separator:(NSString*) decimalSep:(int) opMode:(ViewerController*) viewerController:(RoiManager*) roiManager;
+- (void)displaySaveFile: (NSString*) filename : (int) op_mode;
+- (BOOL)saveResults: (NSString*) filename : (NSString*) separator : (NSString*) decimalSep : (int) opMode : (ViewerController*) viewerController : (RoiManager*) roiManager;
 
 
 @end

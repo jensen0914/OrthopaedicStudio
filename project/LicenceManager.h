@@ -62,10 +62,10 @@ enum LicenseVerfication {
 
 - (id)initWithFilterClass:(OrthopaedicStudioFilter*) main_filter;
 -(void) dealloc;
--(int) checkLicense:(int) verification_mode: (int*)days_left: (NSString**) license_info;
+-(int) checkLicense:(int) verification_mode : (int*)days_left : (NSString**) license_info;
 -(int) readEvaluationFile:(int) max_days_left;
 -(int)readAndVerifyLicenseKey:(NSString**) key_ptr;
-- (BOOL)saveAndVerifyLicenseKey:(NSString*) key: (int) key_status;
+- (BOOL)saveAndVerifyLicenseKey:(NSString*) key : (int) key_status;
 - (BOOL)deleteLicenseKeyFile;
 - (BOOL)verifyLicenseKey:(NSString*) key;
 - (NSString*)extractBodyText:(NSString*) htmltext;

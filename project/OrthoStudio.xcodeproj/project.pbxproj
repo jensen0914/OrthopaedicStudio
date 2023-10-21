@@ -3,19 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FD2D6922AE450770026D4CD /* AppControllerMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D68D2AE450770026D4CD /* AppControllerMenu.h */; };
+		5FD2D6932AE450770026D4CD /* Scheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D68E2AE450770026D4CD /* Scheduler.h */; };
+		5FD2D6942AE450770026D4CD /* Schedulable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D68F2AE450770026D4CD /* Schedulable.h */; };
+		5FD2D6952AE450770026D4CD /* StaticScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D6902AE450770026D4CD /* StaticScheduler.h */; };
+		5FD2D6962AE450770026D4CD /* OSIWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D6912AE450770026D4CD /* OSIWindowController.h */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
-		ABB76340067FB2A8000912C1 /* DCMPix.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB76339067FB2A8000912C1 /* DCMPix.h */; };
-		ABB76341067FB2A8000912C1 /* DCMView.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633A067FB2A8000912C1 /* DCMView.h */; };
-		ABB76342067FB2A8000912C1 /* dicomFile.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633B067FB2A8000912C1 /* dicomFile.h */; };
-		ABB76343067FB2A8000912C1 /* MyPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633C067FB2A8000912C1 /* MyPoint.h */; };
-		ABB76344067FB2A8000912C1 /* PluginFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633D067FB2A8000912C1 /* PluginFilter.h */; };
-		ABB76345067FB2A8000912C1 /* ROI.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633E067FB2A8000912C1 /* ROI.h */; };
-		ABB76346067FB2A8000912C1 /* ViewerController.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB7633F067FB2A8000912C1 /* ViewerController.h */; };
 		EB0C82C71212A5AE007A7E07 /* AP_left_femur.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82C61212A5AE007A7E07 /* AP_left_femur.png */; };
 		EB0C82DA1212A5BD007A7E07 /* AP_left_lateral.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82D11212A5BD007A7E07 /* AP_left_lateral.png */; };
 		EB0C82DB1212A5BD007A7E07 /* AP_left_medial.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82D21212A5BD007A7E07 /* AP_left_medial.png */; };
@@ -29,11 +27,9 @@
 		EB0C84101212F008007A7E07 /* OrthopaedicStudioFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0C840F1212F008007A7E07 /* OrthopaedicStudioFilter.m */; };
 		EB0C84121212F021007A7E07 /* OrthopaedicStudioFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0C84111212F021007A7E07 /* OrthopaedicStudioFilter.h */; };
 		EB0C84141212F03F007A7E07 /* OrthoStudio_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = EB0C84131212F03F007A7E07 /* OrthoStudio_Prefix.pch */; };
-		EB1FEE7512D3811100732EC2 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1FEE7412D3811100732EC2 /* AppController.h */; };
 		EB1FEE7812D382DF00732EC2 /* AppControllerMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1FEE7712D382DF00732EC2 /* AppControllerMenu.h */; };
 		EB1FEE7A12D382F900732EC2 /* AppControllerMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1FEE7912D382F900732EC2 /* AppControllerMenu.m */; };
 		EB27462F11C66F1A00829AA6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB27462E11C66F1A00829AA6 /* MainMenu.xib */; };
-		EB297A1711D23D1800A7E875 /* OsiriX Headers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB297A1611D23D1800A7E875 /* OsiriX Headers.framework */; };
 		EB412408152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB412404152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png */; };
 		EB412409152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB412405152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png */; };
 		EB41240A152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB412406152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckLeft.png */; };
@@ -70,8 +66,6 @@
 		EBF66C4212F03D7700A07616 /* MACAddressManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF66C4112F03D7700A07616 /* MACAddressManager.h */; };
 		EBFA62C712F6AC9200C69703 /* NSAttributedString+Hyperlink.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */; };
 		EBFA62C812F6AC9200C69703 /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */; };
-		EBFE8B20121BFB9100D127E8 /* DCMObject.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFE8B1F121BFB9100D127E8 /* DCMObject.h */; };
-		EBFE8BD4121C255500D127E8 /* FoundationErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFE8BD3121C255500D127E8 /* FoundationErrors.h */; };
 		EBFEE8901223ED3800A845C6 /* Frog_left_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88A1223ED3800A845C6 /* Frog_left_circle.png */; };
 		EBFEE8911223ED3800A845C6 /* Frog_left_femur.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88B1223ED3800A845C6 /* Frog_left_femur.png */; };
 		EBFEE8921223ED3800A845C6 /* Frog_left_narrowest.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88C1223ED3800A845C6 /* Frog_left_narrowest.png */; };
@@ -82,17 +76,15 @@
 
 /* Begin PBXFileReference section */
 		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		5FD2D6852AE43E900026D4CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5FD2D68D2AE450770026D4CD /* AppControllerMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppControllerMenu.h; sourceTree = "<group>"; };
+		5FD2D68E2AE450770026D4CD /* Scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheduler.h; sourceTree = "<group>"; };
+		5FD2D68F2AE450770026D4CD /* Schedulable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedulable.h; sourceTree = "<group>"; };
+		5FD2D6902AE450770026D4CD /* StaticScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticScheduler.h; sourceTree = "<group>"; };
+		5FD2D6912AE450770026D4CD /* OSIWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSIWindowController.h; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABB76339067FB2A8000912C1 /* DCMPix.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DCMPix.h; sourceTree = "<group>"; };
-		ABB7633A067FB2A8000912C1 /* DCMView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = DCMView.h; sourceTree = "<group>"; };
-		ABB7633B067FB2A8000912C1 /* dicomFile.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = dicomFile.h; sourceTree = "<group>"; };
-		ABB7633C067FB2A8000912C1 /* MyPoint.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyPoint.h; sourceTree = "<group>"; };
-		ABB7633D067FB2A8000912C1 /* PluginFilter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PluginFilter.h; sourceTree = "<group>"; };
-		ABB7633E067FB2A8000912C1 /* ROI.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ROI.h; sourceTree = "<group>"; };
-		ABB7633F067FB2A8000912C1 /* ViewerController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ViewerController.h; sourceTree = "<group>"; };
 		EB0C82C61212A5AE007A7E07 /* AP_left_femur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_femur.png; sourceTree = "<group>"; };
 		EB0C82D11212A5BD007A7E07 /* AP_left_lateral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_lateral.png; sourceTree = "<group>"; };
 		EB0C82D21212A5BD007A7E07 /* AP_left_medial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_medial.png; sourceTree = "<group>"; };
@@ -107,11 +99,9 @@
 		EB0C84111212F021007A7E07 /* OrthopaedicStudioFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrthopaedicStudioFilter.h; sourceTree = "<group>"; };
 		EB0C84131212F03F007A7E07 /* OrthoStudio_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrthoStudio_Prefix.pch; sourceTree = "<group>"; };
 		EB0C84181212F084007A7E07 /* Orthopaedic Studio.osirixplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Orthopaedic Studio.osirixplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB1FEE7412D3811100732EC2 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		EB1FEE7712D382DF00732EC2 /* AppControllerMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppControllerMenu.h; path = "OsiriX Headers/AppControllerMenu.h"; sourceTree = "<group>"; };
 		EB1FEE7912D382F900732EC2 /* AppControllerMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppControllerMenu.m; sourceTree = "<group>"; };
 		EB27462E11C66F1A00829AA6 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		EB297A1611D23D1800A7E875 /* OsiriX Headers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "OsiriX Headers.framework"; sourceTree = "<group>"; };
 		EB412404152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointAPFemoralHeadExceedsCircleLeft.png; sourceTree = "<group>"; };
 		EB412405152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointAPFemoralHeadExceedsCircleRight.png; sourceTree = "<group>"; };
 		EB412406152BD5D70013E8C5 /* pointAPNarrowestFemoralNeckLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointAPNarrowestFemoralNeckLeft.png; sourceTree = "<group>"; };
@@ -148,8 +138,6 @@
 		EBF66C4112F03D7700A07616 /* MACAddressManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACAddressManager.h; sourceTree = "<group>"; };
 		EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
 		EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
-		EBFE8B1F121BFB9100D127E8 /* DCMObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMObject.h; sourceTree = "<group>"; };
-		EBFE8BD3121C255500D127E8 /* FoundationErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationErrors.h; sourceTree = "<group>"; };
 		EBFEE88A1223ED3800A845C6 /* Frog_left_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_left_circle.png; sourceTree = "<group>"; };
 		EBFEE88B1223ED3800A845C6 /* Frog_left_femur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_left_femur.png; sourceTree = "<group>"; };
 		EBFEE88C1223ED3800A845C6 /* Frog_left_narrowest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_left_narrowest.png; sourceTree = "<group>"; };
@@ -164,7 +152,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
-				EB297A1711D23D1800A7E875 /* OsiriX Headers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +234,7 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				ABB76338067FB2A8000912C1 /* OsiriX Headers */,
+				5FD2D68C2AE450770026D4CD /* OsiriX Headers */,
 				AB2C26750677B0C400A08910 /* OrthoStudioCode */,
 			);
 			name = Classes;
@@ -264,7 +251,6 @@
 		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EB297A1611D23D1800A7E875 /* OsiriX Headers.framework */,
 				089C1672FE841209C02AAC07 /* Foundation.framework */,
 				089C167FFE841241C02AAC07 /* AppKit.framework */,
 			);
@@ -285,6 +271,18 @@
 				EB0C84131212F03F007A7E07 /* OrthoStudio_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		5FD2D68C2AE450770026D4CD /* OsiriX Headers */ = {
+			isa = PBXGroup;
+			children = (
+				5FD2D68D2AE450770026D4CD /* AppControllerMenu.h */,
+				5FD2D68E2AE450770026D4CD /* Scheduler.h */,
+				5FD2D68F2AE450770026D4CD /* Schedulable.h */,
+				5FD2D6902AE450770026D4CD /* StaticScheduler.h */,
+				5FD2D6912AE450770026D4CD /* OSIWindowController.h */,
+			);
+			path = "OsiriX Headers";
 			sourceTree = "<group>";
 		};
 		AB2C26750677B0C400A08910 /* OrthoStudioCode */ = {
@@ -308,23 +306,6 @@
 			name = OrthoStudioCode;
 			sourceTree = "<group>";
 		};
-		ABB76338067FB2A8000912C1 /* OsiriX Headers */ = {
-			isa = PBXGroup;
-			children = (
-				EB1FEE7412D3811100732EC2 /* AppController.h */,
-				ABB7633D067FB2A8000912C1 /* PluginFilter.h */,
-				EBFE8BD3121C255500D127E8 /* FoundationErrors.h */,
-				ABB76339067FB2A8000912C1 /* DCMPix.h */,
-				EBFE8B1F121BFB9100D127E8 /* DCMObject.h */,
-				ABB7633A067FB2A8000912C1 /* DCMView.h */,
-				ABB7633B067FB2A8000912C1 /* dicomFile.h */,
-				ABB7633C067FB2A8000912C1 /* MyPoint.h */,
-				ABB7633E067FB2A8000912C1 /* ROI.h */,
-				ABB7633F067FB2A8000912C1 /* ViewerController.h */,
-			);
-			path = "OsiriX Headers";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -332,23 +313,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB76340067FB2A8000912C1 /* DCMPix.h in Headers */,
-				ABB76341067FB2A8000912C1 /* DCMView.h in Headers */,
-				ABB76342067FB2A8000912C1 /* dicomFile.h in Headers */,
-				ABB76343067FB2A8000912C1 /* MyPoint.h in Headers */,
-				ABB76344067FB2A8000912C1 /* PluginFilter.h in Headers */,
-				ABB76345067FB2A8000912C1 /* ROI.h in Headers */,
-				ABB76346067FB2A8000912C1 /* ViewerController.h in Headers */,
 				EBE4463412004A75009C44B9 /* ResultsManager.h in Headers */,
 				EBE447C51200878A009C44B9 /* RoiManager.h in Headers */,
 				EB0C84121212F021007A7E07 /* OrthopaedicStudioFilter.h in Headers */,
+				5FD2D6962AE450770026D4CD /* OSIWindowController.h in Headers */,
 				EB0C84141212F03F007A7E07 /* OrthoStudio_Prefix.pch in Headers */,
-				EBFE8B20121BFB9100D127E8 /* DCMObject.h in Headers */,
-				EBFE8BD4121C255500D127E8 /* FoundationErrors.h in Headers */,
-				EB1FEE7512D3811100732EC2 /* AppController.h in Headers */,
+				5FD2D6922AE450770026D4CD /* AppControllerMenu.h in Headers */,
 				EB1FEE7812D382DF00732EC2 /* AppControllerMenu.h in Headers */,
+				5FD2D6932AE450770026D4CD /* Scheduler.h in Headers */,
+				5FD2D6942AE450770026D4CD /* Schedulable.h in Headers */,
 				EBF66C3E12F03D5E00A07616 /* LicenceManager.h in Headers */,
 				EBF66C4212F03D7700A07616 /* MACAddressManager.h in Headers */,
+				5FD2D6952AE450770026D4CD /* StaticScheduler.h in Headers */,
 				EBFA62C712F6AC9200C69703 /* NSAttributedString+Hyperlink.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,12 +357,17 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
 			buildConfigurationList = CE6A9A8108AC840200D0C1EE /* Build configuration list for PBXProject "OrthoStudio" */;
 			compatibilityVersion = "Xcode 2.4";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* Duplicate */;
 			projectDirPath = "";
@@ -482,7 +463,7 @@
 		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				089C167EFE841241C02AAC07 /* English */,
+				5FD2D6852AE43E900026D4CD /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -493,9 +474,9 @@
 		CE6A9A7E08AC840200D0C1EE /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUGGING_SYMBOLS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -503,7 +484,6 @@
 				);
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)\"";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_ENABLE_TRIGRAPHS = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -517,7 +497,7 @@
 				INSTALL_PATH = "@executable_path/../Plug-ins";
 				LIBRARY_SEARCH_PATHS = "";
 				LIBRARY_STYLE = Bundle;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
@@ -526,8 +506,9 @@
 				);
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = "Orthopaedic Studio";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				SDKROOT = macosx;
 				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "\"/Applications/OsiriX MD.app/Contents/Frameworks\"";
 				WARNING_CFLAGS = (
 					"-Wmost",
 					"-Wno-four-char-constants",
@@ -541,10 +522,39 @@
 		CE6A9A8208AC840200D0C1EE /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
-				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
 			};
 			name = Development;
 		};

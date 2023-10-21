@@ -9,7 +9,7 @@
 // =========================================================================
 
 #import "AppControllerMenu.h"
-#import "AppController.h"
+#import <OsiriXAPI/AppController.h>
 #import <AppKit/AppKit.h>
 
 @implementation AppController (Menu)

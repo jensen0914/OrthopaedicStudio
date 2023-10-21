@@ -14,7 +14,7 @@
 //#import <OsiriX Headers/AppController.h>
 #import "AppControllerMenu.h"
 #import "OrthopaedicStudioFilter.h"
-#import <OsiriX Headers/Notifications.h>
+#import <OsiriXAPI/Notifications.h>
 #import "RoiManager.h"
 #import "ResultsManager.h"
 #import "LicenceManager.h"
@@ -523,7 +523,7 @@ LicenceManager *licenseManager;
 
 
 
--(int)performLicenseAction: (int)license_check: (int)checking_mode: (int)days_left: (NSString*)license_info {
+-(int)performLicenseAction: (int)license_check : (int)checking_mode : (int)days_left : (NSString*)license_info {
 	
 	BOOL ask_eval_switch = NO;
 	BOOL hide_register_menu = NO;

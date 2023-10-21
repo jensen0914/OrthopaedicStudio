@@ -244,20 +244,20 @@ enum FP_ACESide {
 }
 
 -(void)initClean;
--(void)restart:(ViewerController*) viewerController:(BOOL) include_prefs;
+-(void)restart: (ViewerController*) viewerController : (BOOL) include_prefs;
 -(int)getStep;
 -(int)getNextStep;
--(void)setStep: (int)step: (int)op_mode;
--(void)roiSelected:(NSNotification*)notification: (ViewerController*) viewerController;
--(void)mouseClicked:(NSNotification*)notification: (ViewerController*) viewerController;
--(void)roiChanged:(NSNotification*)notification: (ViewerController*) viewerController:(OrthopaedicStudioFilter*) mainFilter;
--(int)roiAdded:(NSNotification*)notification:(int) op_mode:(ViewerController*) viewerController;
+-(void)setStep: (int)step : (int)op_mode;
+-(void)roiSelected: (NSNotification*)notification : (ViewerController*) viewerController;
+-(void)mouseClicked: (NSNotification*)notification : (ViewerController*) viewerController;
+-(void)roiChanged: (NSNotification*)notification : (ViewerController*) viewerController : (OrthopaedicStudioFilter*) mainFilter;
+-(int)roiAdded: (NSNotification*)notification : (int) op_mode : (ViewerController*) viewerController;
 -(void)makeLastAddedRoiTextualInfoVisible;
 -(void)updateCalculatedRois:(ViewerController*) viewerController;
--(void)displayROIInstructions:(int)stepNbr:(int)op_mode:(OrthopaedicStudioFilter*) mainFilter;
+-(void)displayROIInstructions: (int)stepNbr : (int)op_mode : (OrthopaedicStudioFilter*) mainFilter;
 -(int)checkOpModeFromExistingPoints:(ViewerController*) viewerController;
--(int)loadFromExistingPoints:(int) op_mode:(ViewerController*) viewerController;
+-(int)loadFromExistingPoints: (int) op_mode : (ViewerController*) viewerController;
 -(BOOL)isThisThePrefsRoi:(ROI*) roi;
--(BOOL)isRoiOneOfOurs:(ROI*) roi: (BOOL) nullify; 
+-(BOOL)isRoiOneOfOurs: (ROI*) roi : (BOOL) nullify;
 
 @end
