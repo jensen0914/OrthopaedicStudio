@@ -13,6 +13,8 @@
 		5FD2D6952AE450770026D4CD /* StaticScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D6902AE450770026D4CD /* StaticScheduler.h */; };
 		5FD2D6962AE450770026D4CD /* OSIWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D6912AE450770026D4CD /* OSIWindowController.h */; };
 		5FD2D6982AE480460026D4CD /* OS_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FD2D6972AE480460026D4CD /* OS_logo.png */; };
+		5FD2D69B2AE551F30026D4CD /* AppControllerMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FD2D6992AE551F30026D4CD /* AppControllerMenu.m */; };
+		5FD2D69C2AE551F30026D4CD /* AppControllerMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FD2D69A2AE551F30026D4CD /* AppControllerMenu.h */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		EB0C82C71212A5AE007A7E07 /* AP_left_femur.png in Resources */ = {isa = PBXBuildFile; fileRef = EB0C82C61212A5AE007A7E07 /* AP_left_femur.png */; };
@@ -28,8 +30,6 @@
 		EB0C84101212F008007A7E07 /* OrthopaedicStudioFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0C840F1212F008007A7E07 /* OrthopaedicStudioFilter.m */; };
 		EB0C84121212F021007A7E07 /* OrthopaedicStudioFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0C84111212F021007A7E07 /* OrthopaedicStudioFilter.h */; };
 		EB0C84141212F03F007A7E07 /* OrthoStudio_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = EB0C84131212F03F007A7E07 /* OrthoStudio_Prefix.pch */; };
-		EB1FEE7812D382DF00732EC2 /* AppControllerMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1FEE7712D382DF00732EC2 /* AppControllerMenu.h */; };
-		EB1FEE7A12D382F900732EC2 /* AppControllerMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1FEE7912D382F900732EC2 /* AppControllerMenu.m */; };
 		EB27462F11C66F1A00829AA6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB27462E11C66F1A00829AA6 /* MainMenu.xib */; };
 		EB412408152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = EB412404152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png */; };
 		EB412409152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png in Resources */ = {isa = PBXBuildFile; fileRef = EB412405152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png */; };
@@ -61,8 +61,6 @@
 		EBE4463512004A75009C44B9 /* ResultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE4463312004A75009C44B9 /* ResultsManager.m */; };
 		EBE447C51200878A009C44B9 /* RoiManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EBE447C31200878A009C44B9 /* RoiManager.h */; };
 		EBE447C61200878A009C44B9 /* RoiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE447C41200878A009C44B9 /* RoiManager.m */; };
-		EBFA62C712F6AC9200C69703 /* NSAttributedString+Hyperlink.h in Headers */ = {isa = PBXBuildFile; fileRef = EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */; };
-		EBFA62C812F6AC9200C69703 /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */; };
 		EBFEE8901223ED3800A845C6 /* Frog_left_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88A1223ED3800A845C6 /* Frog_left_circle.png */; };
 		EBFEE8911223ED3800A845C6 /* Frog_left_femur.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88B1223ED3800A845C6 /* Frog_left_femur.png */; };
 		EBFEE8921223ED3800A845C6 /* Frog_left_narrowest.png in Resources */ = {isa = PBXBuildFile; fileRef = EBFEE88C1223ED3800A845C6 /* Frog_left_narrowest.png */; };
@@ -82,6 +80,8 @@
 		5FD2D6902AE450770026D4CD /* StaticScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticScheduler.h; sourceTree = "<group>"; };
 		5FD2D6912AE450770026D4CD /* OSIWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSIWindowController.h; sourceTree = "<group>"; };
 		5FD2D6972AE480460026D4CD /* OS_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OS_logo.png; sourceTree = "<group>"; };
+		5FD2D6992AE551F30026D4CD /* AppControllerMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppControllerMenu.m; sourceTree = "<group>"; };
+		5FD2D69A2AE551F30026D4CD /* AppControllerMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppControllerMenu.h; sourceTree = "<group>"; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB0C82C61212A5AE007A7E07 /* AP_left_femur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_femur.png; sourceTree = "<group>"; };
 		EB0C82D11212A5BD007A7E07 /* AP_left_lateral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AP_left_lateral.png; sourceTree = "<group>"; };
@@ -97,8 +97,6 @@
 		EB0C84111212F021007A7E07 /* OrthopaedicStudioFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrthopaedicStudioFilter.h; sourceTree = "<group>"; };
 		EB0C84131212F03F007A7E07 /* OrthoStudio_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrthoStudio_Prefix.pch; sourceTree = "<group>"; };
 		EB0C84181212F084007A7E07 /* Orthopaedic Studio.osirixplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Orthopaedic Studio.osirixplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB1FEE7712D382DF00732EC2 /* AppControllerMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppControllerMenu.h; path = "OsiriX Headers/AppControllerMenu.h"; sourceTree = "<group>"; };
-		EB1FEE7912D382F900732EC2 /* AppControllerMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppControllerMenu.m; sourceTree = "<group>"; };
 		EB27462E11C66F1A00829AA6 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		EB412404152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointAPFemoralHeadExceedsCircleLeft.png; sourceTree = "<group>"; };
 		EB412405152BD5D70013E8C5 /* pointAPFemoralHeadExceedsCircleRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pointAPFemoralHeadExceedsCircleRight.png; sourceTree = "<group>"; };
@@ -130,8 +128,6 @@
 		EBE4463312004A75009C44B9 /* ResultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsManager.m; sourceTree = "<group>"; };
 		EBE447C31200878A009C44B9 /* RoiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoiManager.h; sourceTree = "<group>"; };
 		EBE447C41200878A009C44B9 /* RoiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoiManager.m; sourceTree = "<group>"; };
-		EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
-		EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
 		EBFEE88A1223ED3800A845C6 /* Frog_left_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_left_circle.png; sourceTree = "<group>"; };
 		EBFEE88B1223ED3800A845C6 /* Frog_left_femur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_left_femur.png; sourceTree = "<group>"; };
 		EBFEE88C1223ED3800A845C6 /* Frog_left_narrowest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Frog_left_narrowest.png; sourceTree = "<group>"; };
@@ -283,16 +279,14 @@
 		AB2C26750677B0C400A08910 /* OrthoStudioCode */ = {
 			isa = PBXGroup;
 			children = (
-				EB1FEE7912D382F900732EC2 /* AppControllerMenu.m */,
-				EB1FEE7712D382DF00732EC2 /* AppControllerMenu.h */,
+				5FD2D69A2AE551F30026D4CD /* AppControllerMenu.h */,
+				5FD2D6992AE551F30026D4CD /* AppControllerMenu.m */,
 				EB0C84111212F021007A7E07 /* OrthopaedicStudioFilter.h */,
 				EB0C840F1212F008007A7E07 /* OrthopaedicStudioFilter.m */,
 				EBE4463212004A75009C44B9 /* ResultsManager.h */,
 				EBE4463312004A75009C44B9 /* ResultsManager.m */,
 				EBE447C31200878A009C44B9 /* RoiManager.h */,
 				EBE447C41200878A009C44B9 /* RoiManager.m */,
-				EBFA62C512F6AC9200C69703 /* NSAttributedString+Hyperlink.h */,
-				EBFA62C612F6AC9200C69703 /* NSAttributedString+Hyperlink.m */,
 			);
 			name = OrthoStudioCode;
 			sourceTree = "<group>";
@@ -309,12 +303,11 @@
 				EB0C84121212F021007A7E07 /* OrthopaedicStudioFilter.h in Headers */,
 				5FD2D6962AE450770026D4CD /* OSIWindowController.h in Headers */,
 				EB0C84141212F03F007A7E07 /* OrthoStudio_Prefix.pch in Headers */,
+				5FD2D69C2AE551F30026D4CD /* AppControllerMenu.h in Headers */,
 				5FD2D6922AE450770026D4CD /* AppControllerMenu.h in Headers */,
-				EB1FEE7812D382DF00732EC2 /* AppControllerMenu.h in Headers */,
 				5FD2D6932AE450770026D4CD /* Scheduler.h in Headers */,
 				5FD2D6942AE450770026D4CD /* Schedulable.h in Headers */,
 				5FD2D6952AE450770026D4CD /* StaticScheduler.h in Headers */,
-				EBFA62C712F6AC9200C69703 /* NSAttributedString+Hyperlink.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,11 +430,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FD2D69B2AE551F30026D4CD /* AppControllerMenu.m in Sources */,
 				EBE4463512004A75009C44B9 /* ResultsManager.m in Sources */,
 				EBE447C61200878A009C44B9 /* RoiManager.m in Sources */,
 				EB0C84101212F008007A7E07 /* OrthopaedicStudioFilter.m in Sources */,
-				EB1FEE7A12D382F900732EC2 /* AppControllerMenu.m in Sources */,
-				EBFA62C812F6AC9200C69703 /* NSAttributedString+Hyperlink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

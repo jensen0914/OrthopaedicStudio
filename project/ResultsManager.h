@@ -101,6 +101,7 @@ enum SaveFields {
 }
 
 - (void)initWithMainFilter:(OrthopaedicStudioFilter*) main_filter;
+- (NSInteger) displayAlert : (NSString*) alertStr;
 - (void)readVisualScoreResults:(int) op_mode;
 - (void)readROIResults: (int) op_mode : (RoiManager*) roiManager : (BOOL) update_FP_side;
 - (void)readROIResultsForFile: (int) op_mode : (RoiManager*) roiManager;

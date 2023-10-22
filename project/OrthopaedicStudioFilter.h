@@ -15,7 +15,7 @@
 #import <OsiriXAPI/PluginFilter.h>
 #import <Cocoa/Cocoa.h>
 
-#define TEXT_REG_DISCLAIMER1				@"Orthopaedic Studio \n\nCopyright 2010-2017, Carl Siversson (carl.siversson@med.lu.se), Lund University, Sweden"
+#define TEXT_REG_DISCLAIMER1				@"Copyright 2010-2017, Carl Siversson (carl.siversson@med.lu.se), Lund University, Sweden"
 #define TEXT_REG_DISCLAIMER2				@"\n\nTHE SOFTWARE IS PROVIDED AS IS. USE THE SOFTWARE AT YOUR OWN RISK. NEITHER THE AUTHOR NOR THE DISTRIBUTOR MAKES ANY WARRANTIES AS TO PERFORMANCE OR FITNESS FOR A PARTICULAR PURPOSE, OR ANY OTHER WARRANTIES WHETHER EXPRESSED OR IMPLIED. NO ORAL OR WRITTEN COMMUNICATION FROM OR INFORMATION PROVIDED BY THE AUTHOR OR THE DISTRIBUTOR SHALL CREATE A WARRANTY. UNDER NO CIRCUMSTANCES SHALL THE AUTHOR OR THE DISTRIBUTOR BE LIABLE FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES RESULTING FROM THE USE, MISUSE, OR INABILITY TO USE THE SOFTWARE, EVEN IF THE AUTHOR OR THE DISTRIBUTOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.\n\nTHIS SOFTWARE IS NOT CERTIFIED FOR PRIMARY DIAGNOSTIC IMAGING.\n\nAll calculations, measurements and images provided by this software are intended for non-diagnostic investigational use only. Any other use is entirely at the discretion and risk of the user. If you do use this software for scientific research please give appropriate credit in publications. \n\nThis software is distributed under the GNU GPL v3 licence."
 
 #define TEXT_ORTHO_HELP_URL                 @"https://web.archive.org/web/20160303223908/http://orthostudio.spectronic.se/orthostudio/User_Manual.html"
@@ -216,6 +216,8 @@ enum Windows {
 - (BOOL)windowShouldClose:(NSWindow *)sender;
 - (IBAction)popupMenuFPSide:(id)sender;
 - (IBAction)buttonHelp:(id)sender;
+
+- (NSInteger) displayAlert : (NSString*) alertStr : (NSString*) choice1Str : (NSString*) choice2Str : (NSString*) choice3Str;
 
 -(void)closeViewer:(NSNotification*)notification;
 -(void)roiWillBeDeleted:(NSNotification*)notification;

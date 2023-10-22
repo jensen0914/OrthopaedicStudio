@@ -1072,7 +1072,7 @@
 			y3 = [[[pointFrogScfeFemoralHeadRight points] objectAtIndex:0] y];
 		}
 		
-		
+		r = COORD_MAX; // initialize to value that will be ignored
 		s = 0.5*((x2 - x3)*(x1 - x3) - (y2 - y3)*(y3 - y1));
 		sUnder = (x1 - x2)*(y3 - y1) - (y2 - y1)*(x1 - x3);
 		

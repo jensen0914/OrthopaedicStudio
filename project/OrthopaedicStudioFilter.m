@@ -11,13 +11,11 @@
 //  PURPOSE.
 // =========================================================================
 
-#import <OsiriXAPI/AppController.h>
-//#import "AppControllerMenu.h"
+#import "AppControllerMenu.h"
 #import "OrthopaedicStudioFilter.h"
 #import <OsiriXAPI/Notifications.h>
 #import "RoiManager.h"
 #import "ResultsManager.h"
-#import "NSAttributedString+Hyperlink.h"
 
 
 ResultsManager *resultsManager;
@@ -26,6 +24,23 @@ RoiManager *roiManager;
 
 @implementation OrthopaedicStudioFilter
 
+- (NSInteger) displayAlert : (NSString*) alertStr : (NSString*) choice1Str : (NSString*) choice2Str : (NSString*) choice3Str {
+
+	NSAlert* alert = [ [ NSAlert alloc ] init ];
+	[ alert addButtonWithTitle : choice1Str ];
+	[ alert addButtonWithTitle : choice2Str ];
+	if ( choice3Str != nil )
+	{
+		[ alert addButtonWithTitle : choice3Str ];
+	}
+	[ alert setMessageText : @"Orthopaedic Studio"];
+	[ alert setInformativeText : alertStr ];
+	[ alert setAlertStyle : NSAlertStyleInformational ];
+	[ alert setShowsSuppressionButton : NO ];
+	NSInteger choice = [ alert runModal ];
+	[ alert release ];
+	return choice;
+}
 
 - (long) filterImage:(NSString*) menuName {
 	
@@ -110,9 +125,12 @@ RoiManager *roiManager;
 	
 	// if first time starting then show disclaimer
 	if(Op_Mode == NoInit) {
-		if(NSRunInformationalAlertPanel(@"Orthopaedic Studio Disclaimer",
-										[NSString stringWithFormat:@"%@%@", TEXT_REG_DISCLAIMER1, TEXT_REG_DISCLAIMER2],
-										@"Stop", @"Continue", NULL) == NSAlertDefaultReturn) {
+		NSInteger choice = [self displayAlert :
+							[NSString stringWithFormat:@"%@%@", TEXT_REG_DISCLAIMER1, TEXT_REG_DISCLAIMER2] :
+							@"Stop" :
+							@"Continue" :
+							nil];
+		if (choice == NSAlertFirstButtonReturn) {
 			[self closePlugin];
 			return 0;
 		}
@@ -354,14 +372,6 @@ RoiManager *roiManager;
 		{
 			NSMenu *orthoStudioSubMenu = 0L;
 			orthoStudioSubMenu = [orthoStudioMenu submenu];
-			
-           // så hör använder man paragraph styles (behåller det för att det var krångligt att få igång) 
-           // NSMutableParagraphStyle *aMutableParagraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-           // [aMutableParagraphStyle setMaximumLineHeight:7.0];
-           // NSAttributedString *multiMeasTitleString = [[NSAttributedString alloc] initWithString:@"\nMULTIPLE MEASUREMENTS\n" attributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSFont menuFontOfSize:10.0], NSFontAttributeName, aMutableParagraphStyle, NSParagraphStyleAttributeName, nil]];
-           // [aMutableParagraphStyle release];
-           // [multiMeasTitleString release];
-                        
             
             // adding header for combination measurments
             comboMeasTitleMenuItem = [[NSMenuItem alloc] init];
@@ -759,7 +769,12 @@ RoiManager *roiManager;
 - (IBAction)buttonRestart:(id)sender {
 	NSRect frame;
 	
-	if(NSRunInformationalAlertPanel(@"This will remove all currently existing markers. Do you want to continue?", @" " , @"OK", @"Cancel", 0L) == 1) {
+	NSInteger choice = [self displayAlert :
+						@"This will remove all currently existing markers. Do you want to continue?" :
+						@"OK" :
+						@"Continue" :
+						nil];
+	if (choice == NSAlertFirstButtonReturn) {
 		
 		[roiManager restart: viewerController:YES];
 		

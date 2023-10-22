@@ -12,7 +12,6 @@
 // =========================================================================
 
 #import <OsiriXAPI/Notifications.h>
-//#import "FoundationErrors.h"
 #import <OsiriXAPI/PluginFilter.h>
 #import "OrthopaedicStudioFilter.h"
 #import "RoiManager.h"
@@ -30,6 +29,18 @@
 }
 
 
+- (NSInteger) displayAlert : (NSString*) alertStr {
+	
+	NSAlert* alert = [ [ NSAlert alloc ] init ];
+	[ alert addButtonWithTitle : @"OK" ];
+	[ alert setMessageText : @"Orthopaedic Studio"];
+	[ alert setInformativeText : alertStr ];
+	[ alert setAlertStyle : NSAlertStyleInformational ];
+	[ alert setShowsSuppressionButton : NO ];
+	NSInteger choice = [ alert runModal ];
+	[ alert release ];
+	return choice;
+}
 
 
 - (void)readVisualScoreResults:(int) op_mode{
@@ -362,7 +373,7 @@
 	NSString			*pat_id;
 	NSString			*pat_date;
 	
-	dcm_file = [[[[viewerController imageView] dcmPixList] objectAtIndex: [[viewerController imageView] curImage]] srcFile];
+	dcm_file = [[[[viewerController imageView] dcmPixList] objectAtIndex: [[viewerController imageView] curImage]] sourceFile];
 	
 	if( dcm_file && [DicomFile isDICOMFile:dcm_file])
 	{
@@ -432,9 +443,9 @@
 			
 		} else {
 			// error opening file
-			NSRunInformationalAlertPanel(@"An error occured with the file! Close all other programs currently accessing the datafile and try again. Or try saving with another filename.", @"" , @"OK", 0L, 0L);
+			[self displayAlert : @"An error occured with the file! Close all other programs currently accessing the datafile and try again. Or try saving with another filename."];
 			return(NO);
-		}	
+		}
     } else {
 		// file is opened and everything is fine
 		
@@ -461,7 +472,7 @@
 		
 	if (prev_last_line_array == NULL) {
 		// wrong format
-		NSRunInformationalAlertPanel(@"The file you have choosen is not formatted as Orthopaedic Studio is expecting it to be. Try saving to another file.", @"" , @"OK", 0L, 0L);
+		[self displayAlert: @"The file you have choosen is not formatted as Orthopaedic Studio is expecting it to be. Try saving to another file."];
 		return(NO);
 	}	
 		
@@ -471,8 +482,6 @@
 	for(i = 0; i<NbrOfSavedFields; i++) {
 		[new_last_line_array addObject:@""];
 	}
-		
-	//NSRunInformationalAlertPanel(@"New last line array created", @"" , @"OK", 0L, 0L);
 	
 	[self readVisualScoreResults:opMode];
 	[self readROIResultsForFile:opMode: roiManager];
@@ -581,10 +590,6 @@
 			break;
 			
 	}
-	//NSRunInformationalAlertPanel(@"5", @"" , @"OK", 0L, 0L);	
-		
-	//new_last_line_string = (NSMutableString*)[new_last_line_array componentsJoinedByString:separator];
-	
 	
 	// create string without evaluation date	
 	range.location = PatID;
@@ -597,13 +602,11 @@
 	}	
 		
 	// strings are checked without the evluation time, since that will always be different for two successive click on the save button	
-	isAlreadySaved = [new_last_line_string isEqualToString:[[prev_last_line_array objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:range]] componentsJoinedByString:separator]];	
-		
-	//NSRunInformationalAlertPanel(@"6", @"" , @"OK", 0L, 0L);	
+	isAlreadySaved = [new_last_line_string isEqualToString:[[prev_last_line_array objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:range]] componentsJoinedByString:separator]];
 
 	
 	if(isAlreadySaved == YES) {
-		NSRunInformationalAlertPanel(@"Data has already been saved", @"" , @"OK", 0L, 0L);
+		[self displayAlert: @"Data has already been saved."];
 	} else {
 
 		// append evaluation time to the string. Note that dots have not been changed to commas in evaluation time strings.
@@ -616,7 +619,7 @@
 
 		//write to file
 		if([file writeToFile:filename atomically:YES encoding:NSUTF8StringEncoding error:&file_error] == NO) {
-			NSRunInformationalAlertPanel(@"An error occured while saving the data! Close all other programs currently accessing the datafile and try again. Or try saving with another filename.", @"" , @"OK", 0L, 0L);
+			[self displayAlert : @"An error occured while saving the data! Close all other programs currently accessing the datafile and try again. Or try saving with another filename."];
 			return(NO);
 		}		
 		//last_opmode_saving = opMode;
@@ -624,12 +627,11 @@
 
 		
 	} @catch (NSException* e) { 
-		
-		NSRunInformationalAlertPanel(@"There was an exeption error and the data has probably not been saved. Close all other programs accessing the file, then try again.\n\nPlease report this error to the author: carl.siversson@med.lu.se", [e reason]  , @"OK", 0L, 0L);
+		NSLog(@"Orthopaedic Studio exception caught: %@", [e reason]);
+		[self displayAlert : @"There was an exeption error and the data has probably not been saved. Close all other programs accessing the file, then try again."];
 		return(NO);
 	}
 	
-	//NSRunInformationalAlertPanel(@"file saved", pat_id , @"OK", 0L, 0L);
 	return(YES);
 }
 
